@@ -8,43 +8,79 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var logoLabel: UILabel!
-    @IBOutlet weak var logoImage: UIImageView!
-    @IBOutlet weak var mainButton: UIImageView!
-    @IBOutlet weak var congratulationView: UILabel!
+    @IBOutlet weak var logoLabel: UILabel! // Колор Пикер надпись
+    @IBOutlet weak var logoImage: UIImageView! // кисть вверху
+    @IBOutlet weak var mainButtonofApp: UIButton! // кнопка внизу
+    @IBOutlet weak var congratulationView: UILabel! // неизменяемая надпись вверху
     
-    @IBOutlet weak var firstElementForInput: UILabel!
-    @IBOutlet weak var secondElementForInput: UILabel!
-    @IBOutlet weak var thirdElementForInput: UILabel!
+    @IBOutlet weak var firstElementForInput: UILabel! //  надпись Рэд
+    @IBOutlet weak var secondElementForInput: UILabel! // надпись Грин
+    @IBOutlet weak var thirdElementForInput: UILabel! // надпись Блю
     
-    @IBOutlet weak var fildForFirstInputting: UITextField!
-    @IBOutlet weak var secondForFirstInputting: UITextField!
-    @IBOutlet weak var fildForThirdtInputting: UITextField!
-    
-    @IBOutlet weak var messageAboutResult: UILabel!
-    @IBOutlet weak var viewOfChanchingColor: UIView! {
+    @IBOutlet weak var fildForFirstInputting: UITextField! { // первая строка ввода
         didSet {
-            self.viewOfChanchingColor.backgroundColor = newValue
+            self.fildForFirstInputting.clearButtonMode = .always // удаляет текст одной кнопкой если он написан
+        }
+    }
+    @IBOutlet weak var secondForFirstInputting: UITextField! {
+        didSet {
+            self.secondForFirstInputting.clearButtonMode = .always // удаляет текст одной кнопкой если он написан
+        }
+    }
+    @IBOutlet weak var fildForThirdtInputting: UITextField! {
+        didSet {
+            self.fildForThirdtInputting.clearButtonMode = .always // удаляет текст одной кнопкой если он написан
+        }
+    }
+
+    @IBOutlet weak var messageAboutResult: UILabel! // изменяемая часть где выводит предупреждение
+    @IBOutlet weak var viewOfChanchingColor: UIView! { // квадрат изменяет цвет
+        didSet {
+            self.viewOfChanchingColor.backgroundColor = .white
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    @IBAction func firstTyipingDidEnd(_ sender: UITextField) {
-        sender.resignFirstResponder()
+    @IBAction func firstField(_ sender: UITextField) {
+        sender.resignFirstResponder() // ретерн
     }
-    @IBAction func secondTyipingDidEnd(_ sender: UITextField) {
-        sender.resignFirstResponder()
+    @IBAction func secondField(_ sender: UITextField) {
+        sender.resignFirstResponder() // ретерн
     }
-    @IBAction func thirdTyipingDidEnd(_ sender: UITextField) {
-        sender.resignFirstResponder()
+    @IBAction func thirdField(_ sender: UITextField) {
+        sender.resignFirstResponder() // ретерн
+    }
+    
+//    @IBAction func buttonTouched(_ sender: UIButton) {
+//        if let inputText = self.fildForFirstInputting.text, !inputText.isEmpty {
+//            self.messageAboutResult(with: "Invalid color parameters! Please, check them.")
+//            self.viewOfChanchingColor.backgroundColor = .white
+//        } if else let inputText?.characters.count < 0 {
+//            self.changeAppDescription(with: "ERROR")
+//        }
+//    }
+    
+    func setUpView() {
+        self.logoLabel.textColor = .orange
+
+        self.setButton(text: "Print!")
+
+        self.changeAppDescription(with: "ERROR")
     }
 
-    func changeMessage(with text: String) {
-        self.messageAboutResult.text = text
+//func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+//    let isNumber = NSCharacterSet.decimalDigitCharacterSet().isSupersetOfSet(NSCharacterSet(charactersInString: string))
+//
+//    return isNumber || (string == NSNumberFormatter().decimalSeparator && textField.text?.containsString(string) == false)
+//}
+
+    func setButton(text: String) {
+        self.mainButtonofApp.setTitle(text, for: .normal)
     }
-    @IBAction func buttonTouched(_ sender: UIButton) {
+
+    func changeAppDescription(with text: String) {
+        self.messageAboutResult.text = text // функция изменения текста
     }
 }
 

@@ -29,7 +29,7 @@
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKQ-re-108">
-                                <rect key="frame" x="32" y="789" width="350" height="56"/>
+                                <rect key="frame" x="32" y="780" width="350" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -41,7 +41,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R4P-8y-dFf"/>
+                                    <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0li-8N-f0i"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paintpalette" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qyv-XM-AXl">
@@ -62,7 +62,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ERROR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RI8-1f-ByV">
-                                <rect key="frame" x="176" y="447" width="55" height="21"/>
+                                <rect key="frame" x="90" y="404" width="248" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
@@ -73,66 +73,78 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="firstTyipingDidEnd:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="hS3-qk-1BU"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFV-VX-Yax">
                                 <rect key="frame" x="182" y="295" width="200" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                                 <connections>
-                                    <action selector="secondTyipingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Pt0-lF-VCa"/>
+                                    <action selector="secondField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="02p-5R-8lW"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWd-bz-U5q">
                                 <rect key="frame" x="182" y="362" width="200" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
                                 <connections>
-                                    <action selector="thirdTyipingDidEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="dRI-YL-3pG"/>
+                                    <action selector="thirdField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="llT-nC-e9J"/>
                                 </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-h0-0oz">
+                                <rect key="frame" x="60" y="229" width="48" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6B-2L-e4A">
                                 <rect key="frame" x="57" y="295" width="74" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9a-gQ-dtY">
                                 <rect key="frame" x="57" y="362" width="54" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-h0-0oz">
-                                <rect key="frame" x="60" y="229" width="48" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEd-MX-nbV">
+                                <rect key="frame" x="182" y="229" width="200" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jHF-nW-mci">
+                                <rect key="frame" x="182" y="229" width="200" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                <connections>
+                                    <action selector="firstField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZDe-i0-Xlh"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.91352076507439572" green="1" blue="0.99080196667797049" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <connections>
-                        <outlet property="congratulationView" destination="iyu-1O-uvN" id="j5q-g1-dtD"/>
-                        <outlet property="fildForFirstInputting" destination="GuV-Vg-rky" id="JZA-7w-YpQ"/>
-                        <outlet property="fildForThirdtInputting" destination="KWd-bz-U5q" id="cEq-nh-Qbv"/>
-                        <outlet property="firstElementForInput" destination="SaT-h0-0oz" id="icp-R4-yKY"/>
-                        <outlet property="logoImage" destination="lwa-f8-sfY" id="F2G-fA-5h7"/>
-                        <outlet property="logoLabel" destination="M02-Qb-qpL" id="3uN-jD-Omp"/>
-                        <outlet property="mainButton" destination="Qyv-XM-AXl" id="PZl-oY-3KP"/>
-                        <outlet property="messageAboutResult" destination="RI8-1f-ByV" id="n8t-fa-fAL"/>
-                        <outlet property="secondElementForInput" destination="W6B-2L-e4A" id="lbQ-p8-9Pm"/>
-                        <outlet property="secondForFirstInputting" destination="jFV-VX-Yax" id="1EL-9L-fyr"/>
-                        <outlet property="thirdElementForInput" destination="Z9a-gQ-dtY" id="6Fb-Ft-jE9"/>
-                        <outlet property="viewOfChanchingColor" destination="S6z-yo-1C0" id="rnK-Io-DSg"/>
+                        <outlet property="congratulationView" destination="iyu-1O-uvN" id="RtC-JU-VPv"/>
+                        <outlet property="fildForFirstInputting" destination="GuV-Vg-rky" id="YIC-yv-MR6"/>
+                        <outlet property="fildForThirdtInputting" destination="KWd-bz-U5q" id="AVF-rN-W9F"/>
+                        <outlet property="firstElementForInput" destination="SaT-h0-0oz" id="jGs-OZ-4nD"/>
+                        <outlet property="logoImage" destination="lwa-f8-sfY" id="fvO-i4-IqD"/>
+                        <outlet property="logoLabel" destination="M02-Qb-qpL" id="T3i-e8-Hn8"/>
+                        <outlet property="mainButtonofApp" destination="wKQ-re-108" id="5d5-6E-Pta"/>
+                        <outlet property="messageAboutResult" destination="RI8-1f-ByV" id="hNA-Eb-rbf"/>
+                        <outlet property="secondElementForInput" destination="W6B-2L-e4A" id="g9x-e8-1jw"/>
+                        <outlet property="secondForFirstInputting" destination="jFV-VX-Yax" id="Sts-nQ-Ap0"/>
+                        <outlet property="thirdElementForInput" destination="Z9a-gQ-dtY" id="Wy5-LN-udz"/>
+                        <outlet property="viewOfChanchingColor" destination="S6z-yo-1C0" id="5IT-uN-Wqt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,6 +158,9 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -154,6 +169,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
