@@ -12,11 +12,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var logoImage: UIImageView! // кисть вверху
     @IBOutlet weak var mainButtonofApp: UIButton! // кнопка внизу
     @IBOutlet weak var congratulationView: UILabel! // неизменяемая надпись вверху
-    
     @IBOutlet weak var firstElementForInput: UILabel! //  надпись Рэд
     @IBOutlet weak var secondElementForInput: UILabel! // надпись Грин
     @IBOutlet weak var thirdElementForInput: UILabel! // надпись Блю
-    
+    @IBOutlet weak var messageAboutResult: UILabel! // изменяемая часть где выводит предупреждение
     
     @IBOutlet weak var firstForFirstInputting: UITextField! {
         didSet {
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var messageAboutResult: UILabel! // изменяемая часть где выводит предупреждение
     @IBOutlet weak var viewOfChanchingColor: UIView! {  // квадрат изменяет цвет
         didSet {
             self.viewOfChanchingColor.backgroundColor = .white
@@ -44,20 +42,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    func setUpView() {
+        self.logoLabel.textColor = .orange
+        
+        self.setButton(text: "Print!")
+        
+        self.changeAppDescription(text: "You can start!")
+    }
+    func setButton(text: String) {
+        self.mainButtonofApp.setTitle(text, for: .normal)
+    }
+    func changeAppDescription(text: String) {
+        self.messageAboutResult.text = text // функция изменения текста
+    }
     
     @IBAction func firstField(_ sender: UITextField) {
         sender.resignFirstResponder() // ретерн
     }
-    
     @IBAction func secondField(_ sender: UITextField) {
         sender.resignFirstResponder() // ретерн
     }
-    
     @IBAction func thirdField(_ sender: UITextField) {
         sender.resignFirstResponder()
     } // ретерн
-    
     
     @IBAction func buttonTouched(_ sender: Any) {
         if let text = self.firstForFirstInputting.text, text.isEmpty {
@@ -79,20 +86,6 @@ class ViewController: UIViewController {
         let blueIn: Float = Float(self.fildForThirdtInputting!.text ?? "0") ?? 0.0
         
         viewOfChanchingColor.backgroundColor = UIColor(red: redIn, green: greenIn, Blue: blueIn, aplpha: 1.0)
-    }
-    
-    func setUpView() {
-        self.logoLabel.textColor = .orange
-        
-        self.setButton(text: "Print!")
-        
-        self.changeAppDescription(text: "You can start!")
-    }
-    func setButton(text: String) {
-        self.mainButtonofApp.setTitle(text, for: .normal)
-    }
-    func changeAppDescription(text: String) {
-        self.messageAboutResult.text = text // функция изменения текста
     }
 }
 
