@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paintpalette" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Qyv-XM-AXl">
-                                <rect key="frame" x="90" y="795" width="46" height="41"/>
+                                <rect key="frame" x="71" y="787.5" width="46" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -74,22 +74,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFV-VX-Yax">
-                                <rect key="frame" x="182" y="295" width="200" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
-                                <connections>
-                                    <action selector="secondField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="02p-5R-8lW"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KWd-bz-U5q">
                                 <rect key="frame" x="182" y="362" width="200" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="thirdField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="llT-nC-e9J"/>
+                                    <action selector="thirdField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="n5R-cr-3Jd"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Red" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-h0-0oz">
@@ -123,9 +114,18 @@
                                 <rect key="frame" x="182" y="229" width="200" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
-                                    <action selector="firstField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="ZDe-i0-Xlh"/>
+                                    <action selector="firstField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="fsE-E7-Atb"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jFV-VX-Yax">
+                                <rect key="frame" x="182" y="295" width="200" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="secondField:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="dZ7-11-QYG"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -134,15 +134,15 @@
                     </view>
                     <connections>
                         <outlet property="congratulationView" destination="iyu-1O-uvN" id="RtC-JU-VPv"/>
-                        <outlet property="fildForFirstInputting" destination="GuV-Vg-rky" id="YIC-yv-MR6"/>
-                        <outlet property="fildForThirdtInputting" destination="KWd-bz-U5q" id="AVF-rN-W9F"/>
+                        <outlet property="fildForThirdtInputting" destination="KWd-bz-U5q" id="g6a-JK-gui"/>
                         <outlet property="firstElementForInput" destination="SaT-h0-0oz" id="jGs-OZ-4nD"/>
+                        <outlet property="firstForFirstInputting" destination="jHF-nW-mci" id="WWt-Y4-B1z"/>
                         <outlet property="logoImage" destination="lwa-f8-sfY" id="fvO-i4-IqD"/>
                         <outlet property="logoLabel" destination="M02-Qb-qpL" id="T3i-e8-Hn8"/>
                         <outlet property="mainButtonofApp" destination="wKQ-re-108" id="5d5-6E-Pta"/>
                         <outlet property="messageAboutResult" destination="RI8-1f-ByV" id="hNA-Eb-rbf"/>
                         <outlet property="secondElementForInput" destination="W6B-2L-e4A" id="g9x-e8-1jw"/>
-                        <outlet property="secondForFirstInputting" destination="jFV-VX-Yax" id="Sts-nQ-Ap0"/>
+                        <outlet property="secondForFirstInputting" destination="jFV-VX-Yax" id="hHr-e2-Vqm"/>
                         <outlet property="thirdElementForInput" destination="Z9a-gQ-dtY" id="Wy5-LN-udz"/>
                         <outlet property="viewOfChanchingColor" destination="S6z-yo-1C0" id="5IT-uN-Wqt"/>
                     </connections>
