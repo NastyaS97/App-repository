@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E04BF1C725D073FE0091915D /* RegisterViewCotrolllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04BF1C625D073FE0091915D /* RegisterViewCotrolllerViewController.swift */; };
 		E06CE7C225C85664003BE541 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CE7C125C85664003BE541 /* AppDelegate.swift */; };
 		E06CE7C425C85664003BE541 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CE7C325C85664003BE541 /* SceneDelegate.swift */; };
 		E06CE7C625C85664003BE541 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06CE7C525C85664003BE541 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E04BF1C625D073FE0091915D /* RegisterViewCotrolllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewCotrolllerViewController.swift; sourceTree = "<group>"; };
 		E06CE7BE25C85663003BE541 /* AuthProd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuthProd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06CE7C125C85664003BE541 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E06CE7C325C85664003BE541 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				E06CE7C125C85664003BE541 /* AppDelegate.swift */,
 				E06CE7C325C85664003BE541 /* SceneDelegate.swift */,
 				E06CE7C525C85664003BE541 /* ViewController.swift */,
+				E04BF1C625D073FE0091915D /* RegisterViewCotrolllerViewController.swift */,
 				E06CE7C725C85664003BE541 /* Main.storyboard */,
 				E06CE7CC25C85665003BE541 /* LaunchScreen.storyboard */,
 				E06CE7CF25C85665003BE541 /* Info.plist */,
@@ -151,6 +154,7 @@
 			files = (
 				E06CE7C625C85664003BE541 /* ViewController.swift in Sources */,
 				E06CE7C225C85664003BE541 /* AppDelegate.swift in Sources */,
+				E04BF1C725D073FE0091915D /* RegisterViewCotrolllerViewController.swift in Sources */,
 				E06CE7C425C85664003BE541 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,57 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backGroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="zVg-3y-Xqf">
+                            <imageView clipsSubviews="YES" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="zVg-3y-Xqf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Authorization" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-lp-0bM">
-                                <rect key="frame" x="70" y="44" width="282" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Authorization" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUo-lp-0bM">
+                                <rect key="frame" x="35" y="44" width="344" height="69.5"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="2" height="1"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-2Z-I9y">
-                                <rect key="frame" x="54" y="251" width="307" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-Mn-QoF">
+                                <rect key="frame" x="35" y="257.5" width="344" height="46.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KnH-2Z-I9y">
+                                <rect key="frame" x="35" y="309" width="344" height="36"/>
                                 <color key="backgroundColor" name="buttonColor"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="return:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="fPb-p0-OW5"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-Mn-QoF">
-                                <rect key="frame" x="54" y="198" width="307" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SX-Tv-mtE">
+                                <rect key="frame" x="35" y="406.5" width="344" height="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8SX-Tv-mtE">
-                                <rect key="frame" x="54" y="354" width="307" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="return:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="vaG-e6-a1S"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smf-5X-JFo">
-                                <rect key="frame" x="54" y="305" width="307" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smf-5X-JFo">
+                                <rect key="frame" x="35" y="355" width="344" height="46.5"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBi-mh-vtv">
-                                <rect key="frame" x="54" y="777" width="314" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBi-mh-vtv">
+                                <rect key="frame" x="35" y="783" width="344" height="55"/>
                                 <color key="backgroundColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="LNj-nC-iXY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
                                 <state key="normal" title="Log in">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -76,20 +72,27 @@
                                     <action selector="logInAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A9r-Rv-hsz"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-W2-Uld">
-                                <rect key="frame" x="132" y="476" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tan-W2-Uld">
+                                <rect key="frame" x="132" y="530" width="150" height="150"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVP-0S-fBE">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HVP-0S-fBE">
                                         <rect key="frame" x="25" y="25" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="DNM-6C-a9R"/>
+                                            <constraint firstAttribute="height" constant="100" id="RQG-xW-Tdl"/>
+                                        </constraints>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Gkd-PY-1JN"/>
+                                    <constraint firstItem="HVP-0S-fBE" firstAttribute="centerX" secondItem="Tan-W2-Uld" secondAttribute="centerX" id="Jrw-pQ-mRa"/>
+                                    <constraint firstAttribute="width" constant="150" id="XsF-6v-KfH"/>
+                                    <constraint firstItem="HVP-0S-fBE" firstAttribute="centerY" secondItem="Tan-W2-Uld" secondAttribute="centerY" id="jkB-Ig-zsc"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7as-8B-asx">
-                                <rect key="frame" x="141" y="687" width="133" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7as-8B-asx">
+                                <rect key="frame" x="35" y="690" width="344" height="43"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="20"/>
                                 <state key="normal" title="Change Avatar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,6 +104,36 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zVg-3y-Xqf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="2K1-Rf-Qs3"/>
+                            <constraint firstItem="XBi-mh-vtv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="2Nc-1u-rGV"/>
+                            <constraint firstItem="smf-5X-JFo" firstAttribute="top" secondItem="KnH-2Z-I9y" secondAttribute="bottom" constant="10" id="3g9-uw-AXv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="smf-5X-JFo" secondAttribute="trailing" constant="35" id="4Co-G8-e3G"/>
+                            <constraint firstItem="xmh-Mn-QoF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tUo-lp-0bM" secondAttribute="bottom" constant="20" id="4co-Mc-E93"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xmh-Mn-QoF" secondAttribute="trailing" constant="35" id="8Zw-fd-VA0"/>
+                            <constraint firstItem="xmh-Mn-QoF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="JSH-KT-Wkw"/>
+                            <constraint firstItem="zVg-3y-Xqf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Je7-gl-kho"/>
+                            <constraint firstItem="tUo-lp-0bM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="KUU-6f-kAf"/>
+                            <constraint firstItem="KnH-2Z-I9y" firstAttribute="top" secondItem="xmh-Mn-QoF" secondAttribute="bottom" constant="5" id="Kwj-Qy-miL"/>
+                            <constraint firstItem="XBi-mh-vtv" firstAttribute="top" secondItem="7as-8B-asx" secondAttribute="bottom" constant="50" id="Osl-0Q-0qr"/>
+                            <constraint firstItem="7as-8B-asx" firstAttribute="top" secondItem="Tan-W2-Uld" secondAttribute="bottom" constant="10" id="QfO-pH-tVz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8SX-Tv-mtE" secondAttribute="trailing" constant="35" id="RCl-Jw-U2X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tUo-lp-0bM" secondAttribute="trailing" constant="35" id="Rtl-YB-WZV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7as-8B-asx" secondAttribute="trailing" constant="35" id="Va2-qD-PQP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBi-mh-vtv" secondAttribute="trailing" constant="35" id="ZCN-e5-LaO"/>
+                            <constraint firstItem="7as-8B-asx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="c3J-Su-1fY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XBi-mh-vtv" secondAttribute="bottom" constant="24" id="f6S-0t-DFM"/>
+                            <constraint firstItem="Tan-W2-Uld" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fDp-db-ygA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KnH-2Z-I9y" secondAttribute="trailing" constant="35" id="fkc-L2-335"/>
+                            <constraint firstItem="Tan-W2-Uld" firstAttribute="top" secondItem="8SX-Tv-mtE" secondAttribute="bottom" constant="87.5" id="h2f-o0-sNW"/>
+                            <constraint firstItem="KnH-2Z-I9y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="hg6-fV-u5T"/>
+                            <constraint firstItem="zVg-3y-Xqf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oFi-b4-87k"/>
+                            <constraint firstItem="tUo-lp-0bM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oi2-sJ-4O9"/>
+                            <constraint firstItem="smf-5X-JFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="rrY-JW-hYa"/>
+                            <constraint firstItem="8SX-Tv-mtE" firstAttribute="top" secondItem="smf-5X-JFo" secondAttribute="bottom" constant="5" id="v02-Bs-IJr"/>
+                            <constraint firstAttribute="bottom" secondItem="zVg-3y-Xqf" secondAttribute="bottom" id="yC1-YT-vFZ"/>
+                            <constraint firstItem="8SX-Tv-mtE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="zVs-ho-6XO"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="avatarRightImageView" destination="HVP-0S-fBE" id="9fP-4Q-rl5"/>
@@ -112,7 +145,216 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.188405797101453" y="75"/>
+            <point key="canvasLocation" x="-755" y="116"/>
+        </scene>
+        <!--Register View Cotrolller View Controller-->
+        <scene sceneID="tUg-dP-5wO">
+            <objects>
+                <viewController id="aXz-Tr-0Ve" customClass="RegisterViewCotrolllerViewController" customModule="AuthProd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c92-gF-TYf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" alpha="0.20000000298023224" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backGroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="xTd-NE-jwc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J1f-hz-G9h">
+                                <rect key="frame" x="10" y="10" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJ9-Vm-pq9">
+                                <rect key="frame" x="35" y="67.5" width="344" height="69.5"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="F82-ur-vTG">
+                                <rect key="frame" x="35" y="152" width="344" height="616"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPD-W4-x4y">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="evN-wt-ZUS">
+                                        <rect key="frame" x="0.0" y="62" width="344" height="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="GD4-4H-TVV"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7av-Dk-2ZI">
+                                        <rect key="frame" x="0.0" y="105" width="344" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rgg-zi-Zdj">
+                                        <rect key="frame" x="0.0" y="167" width="344" height="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="cD7-vb-dkR"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuB-dx-6VN">
+                                        <rect key="frame" x="0.0" y="210.5" width="344" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FdF-qs-TPM">
+                                        <rect key="frame" x="0.0" y="272.5" width="344" height="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="to2-de-GcZ"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcE-8f-fF0">
+                                        <rect key="frame" x="0.0" y="315.5" width="344" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qn7-fb-Jug">
+                                        <rect key="frame" x="0.0" y="377.5" width="344" height="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="qjC-LV-WBb"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xe-c5-JhU">
+                                        <rect key="frame" x="0.0" y="421" width="344" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="BLx-gZ-1eX">
+                                        <rect key="frame" x="0.0" y="478" width="344" height="37.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsY-KI-kbm">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bx8-B9-hW1">
+                                                <rect key="frame" x="78.5" y="19" width="4" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="TTc-uD-nUL"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8v-pC-WXo">
+                                                <rect key="frame" x="116.5" y="0.0" width="71" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2PJ-Iy-n1N">
+                                                <rect key="frame" x="221" y="19" width="4" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="bFa-Jx-dDu"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKi-Zb-qyt">
+                                                <rect key="frame" x="259" y="0.0" width="47.5" height="37.5"/>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PyF-ar-weQ">
+                                                <rect key="frame" x="340" y="19" width="4" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="838-mR-avc"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fui-Kz-t5b">
+                                        <rect key="frame" x="0.0" y="526" width="344" height="46.5"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pNY-97-eXV">
+                                        <rect key="frame" x="0.0" y="588" width="344" height="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="return:" destination="aXz-Tr-0Ve" eventType="editingDidEnd" id="wtz-Vd-wxN"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcl-Mz-Kbd">
+                                <rect key="frame" x="35" y="783" width="344" height="55"/>
+                                <color key="backgroundColor" name="buttonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="5GC-Go-xsz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="isRegistrationRunning:" destination="aXz-Tr-0Ve" eventType="touchUpInside" id="jV4-Kj-oNm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EqZ-zK-dbu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F82-ur-vTG" firstAttribute="leading" secondItem="EqZ-zK-dbu" secondAttribute="leading" constant="35" id="1In-8m-FGf"/>
+                            <constraint firstItem="Pcl-Mz-Kbd" firstAttribute="leading" secondItem="EqZ-zK-dbu" secondAttribute="leading" constant="35" id="8sv-fh-HBY"/>
+                            <constraint firstItem="F82-ur-vTG" firstAttribute="top" secondItem="AJ9-Vm-pq9" secondAttribute="bottom" constant="15" id="COc-ro-YTF"/>
+                            <constraint firstItem="EqZ-zK-dbu" firstAttribute="trailing" secondItem="AJ9-Vm-pq9" secondAttribute="trailing" constant="35" id="D9X-NH-fVt"/>
+                            <constraint firstAttribute="bottom" secondItem="xTd-NE-jwc" secondAttribute="bottom" id="F1b-Hk-SOF"/>
+                            <constraint firstAttribute="trailing" secondItem="xTd-NE-jwc" secondAttribute="trailing" id="Hoh-TY-ATa"/>
+                            <constraint firstItem="xTd-NE-jwc" firstAttribute="top" secondItem="c92-gF-TYf" secondAttribute="top" id="L1I-5j-mpb"/>
+                            <constraint firstItem="AJ9-Vm-pq9" firstAttribute="top" secondItem="EqZ-zK-dbu" secondAttribute="top" constant="23.5" id="SMr-1b-vTY"/>
+                            <constraint firstItem="EqZ-zK-dbu" firstAttribute="trailing" secondItem="Pcl-Mz-Kbd" secondAttribute="trailing" constant="35" id="Sq8-Z9-b5N"/>
+                            <constraint firstItem="EqZ-zK-dbu" firstAttribute="trailing" secondItem="F82-ur-vTG" secondAttribute="trailing" constant="35" id="dvP-QX-194"/>
+                            <constraint firstItem="EqZ-zK-dbu" firstAttribute="bottom" secondItem="Pcl-Mz-Kbd" secondAttribute="bottom" constant="24" id="fCD-ZQ-hMz"/>
+                            <constraint firstItem="Pcl-Mz-Kbd" firstAttribute="top" secondItem="F82-ur-vTG" secondAttribute="bottom" constant="15" id="tW1-aq-tTm"/>
+                            <constraint firstItem="F82-ur-vTG" firstAttribute="top" secondItem="AJ9-Vm-pq9" secondAttribute="bottom" constant="15" id="u16-Pg-AJY"/>
+                            <constraint firstItem="xTd-NE-jwc" firstAttribute="leading" secondItem="c92-gF-TYf" secondAttribute="leading" id="xAt-0Y-HMW"/>
+                            <constraint firstItem="AJ9-Vm-pq9" firstAttribute="leading" secondItem="EqZ-zK-dbu" secondAttribute="leading" constant="35" id="y2d-si-x2m"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityTextField" destination="pNY-97-eXV" id="pRz-oF-rVy"/>
+                        <outlet property="dayTextField" destination="bx8-B9-hW1" id="7F1-sq-Dqd"/>
+                        <outlet property="emailTextField" destination="qn7-fb-Jug" id="PQ3-WO-Uby"/>
+                        <outlet property="firstTextField" destination="evN-wt-ZUS" id="EUt-4u-XyC"/>
+                        <outlet property="monthTextField" destination="2PJ-Iy-n1N" id="MlI-Vl-aWz"/>
+                        <outlet property="registartionButton" destination="Pcl-Mz-Kbd" id="CYQ-4M-EQU"/>
+                        <outlet property="secondTextField" destination="rgg-zi-Zdj" id="Yje-Hd-KJI"/>
+                        <outlet property="thirdTextField" destination="FdF-qs-TPM" id="fK7-6H-Mwr"/>
+                        <outlet property="yearTextField" destination="PyF-ar-weQ" id="5Ub-Hb-JZs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CA5-TF-EQb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-49.275362318840585" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>
