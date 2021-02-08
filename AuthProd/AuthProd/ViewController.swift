@@ -35,9 +35,24 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    private lazy var orangeBubbleView: UIView = {
+        let view = UIView(frame: CGRect(x: -25, y: -25, width: 90, height: 90))
+        view.backgroundColor = UIColor.orange
+        view.layer.cornerRadius = 45
+        view.layer.shadowOpacity = 0.5
+        view.layer.shadowRadius = 2
+        
+        return view
+    }()
+    
     @IBOutlet weak var backgroundImageView: UIView! {
         didSet {
             self.backgroundImageView.layer.cornerRadius = self.backgroundImageView.bounds.height / 2
+//            self.backgroundImageView.insertSubview(self.orangeBubbleView, aboveSubview: self.avatarRightImageView)
+//            self.backgroundImageView.insertSubview(self.orangeBubbleView, at: 2)
+            self.backgroundImageView.insertSubview(self.orangeBubbleView, belowSubview: self.avatarRightImageView)
+//  self.backgroundImageView.addSubview(self.orangeBubbleView)
 //            self.backgroundImageView.layer.shadowColor = UIColor.black.cgColor
 //            self.backgroundImageView.layer.shadowRadius = 5
 //            self.backgroundImageView.layer.shadowOpacity = 0.2
@@ -74,6 +89,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.setViewData()
+        
+//        self.view.addSubview(self.orangeBubbleView)
     }
     //MARK: - setters
     private func setViewData() {
@@ -114,6 +131,8 @@ class ViewController: UIViewController {
             self.colorBackGround(in: .red, finalColor: .black)
         }
     }
+    
+    
 }
 
 
