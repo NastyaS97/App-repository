@@ -28,12 +28,11 @@ class ViewController: UIViewController {
         stackView.distribution = .fillEqually
         return stackView
     }
+    
     private func fillStackViewWith(image: UIImage) {
         let view = UIImageView(image: image)
         view.contentMode = .scaleAspectFit
-        view.clipsToBounds = true
-//        view.translatesAutoresizingMaskIntoConstraints = false
-        view.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/5).isActive = true
+        view.heightAnchor.constraint(equalToConstant: 150).isActive = true
         
         if let lastStackView = self.backgroundImagesStackView.subviews.last as? UIStackView, lastStackView.subviews.count < 3 {
             lastStackView.addArrangedSubview(view)
@@ -42,7 +41,6 @@ class ViewController: UIViewController {
             stackView.addArrangedSubview(view)
             self.backgroundImagesStackView.addArrangedSubview(stackView)
         }
-        self.backgroundImagesStackView.addArrangedSubview(view)
     }
     
     private func getImage(with index: Int) -> UIImage? {
