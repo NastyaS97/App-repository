@@ -26,59 +26,31 @@
                                 <rect key="frame" x="41.5" y="172" width="331" height="552"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
-                                        <rect key="frame" x="25" y="25" width="281" height="502"/>
+                                        <rect key="frame" x="25" y="25" width="281" height="434"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-a9-CMt">
-                                                <rect key="frame" x="0.0" y="0.0" width="281" height="50"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Anastasiya Soiko" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-IX-h0g">
-                                                        <rect key="frame" x="118" y="5" width="148" height="40"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26g-K0-YSW">
-                                                        <rect key="frame" x="15" y="5" width="98" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-43-LFa" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="281" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstItem="26g-K0-YSW" firstAttribute="top" secondItem="KFs-a9-CMt" secondAttribute="top" constant="5" id="5ew-2H-yLX"/>
-                                                    <constraint firstAttribute="trailing" secondItem="Zbq-IX-h0g" secondAttribute="trailing" constant="15" id="5io-yb-WBT"/>
-                                                    <constraint firstItem="Zbq-IX-h0g" firstAttribute="top" secondItem="KFs-a9-CMt" secondAttribute="top" constant="5" id="UO6-3c-1RG"/>
-                                                    <constraint firstItem="26g-K0-YSW" firstAttribute="leading" secondItem="KFs-a9-CMt" secondAttribute="leading" constant="15" id="bn0-r6-3Ig"/>
-                                                    <constraint firstAttribute="bottom" secondItem="Zbq-IX-h0g" secondAttribute="bottom" constant="5" id="cWP-Ps-ZQf"/>
-                                                    <constraint firstItem="Zbq-IX-h0g" firstAttribute="leading" secondItem="26g-K0-YSW" secondAttribute="trailing" constant="5" id="oxX-dr-xXT"/>
-                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Name"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="Anastasiya Soiko"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAH-RW-BW1">
-                                                <rect key="frame" x="0.0" y="75" width="281" height="427"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Anastasiya Soiko" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjV-fE-udP">
-                                                        <rect key="frame" x="118" y="5" width="148" height="417"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KP-A1-YwS">
-                                                        <rect key="frame" x="15" y="5" width="98" height="24"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-93-a9H" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="153" width="281" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="rjV-fE-udP" secondAttribute="bottom" constant="5" id="7KX-jD-1Rl"/>
-                                                    <constraint firstItem="1KP-A1-YwS" firstAttribute="top" secondItem="LAH-RW-BW1" secondAttribute="top" constant="5" id="AgR-PJ-MoJ"/>
-                                                    <constraint firstItem="rjV-fE-udP" firstAttribute="top" secondItem="LAH-RW-BW1" secondAttribute="top" constant="5" id="BOP-ho-I1E"/>
-                                                    <constraint firstAttribute="trailing" secondItem="rjV-fE-udP" secondAttribute="trailing" constant="15" id="YYt-5r-hGl"/>
-                                                    <constraint firstItem="rjV-fE-udP" firstAttribute="leading" secondItem="1KP-A1-YwS" secondAttribute="trailing" constant="5" id="fea-Wd-4ua"/>
-                                                    <constraint firstItem="1KP-A1-YwS" firstAttribute="leading" secondItem="LAH-RW-BW1" secondAttribute="leading" constant="15" id="yXZ-jv-G8N"/>
-                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Location"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="Belarus"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-Bu-6uZ" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="306" width="281" height="128"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Occupation"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="IOS Developer"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                     </stackView>
