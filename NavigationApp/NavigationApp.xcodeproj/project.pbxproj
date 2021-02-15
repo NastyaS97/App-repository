@@ -13,6 +13,7 @@
 		E0BBAEDD25DAD4FC001FF44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBAEDB25DAD4FC001FF44A /* Main.storyboard */; };
 		E0BBAEDF25DAD4FE001FF44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0BBAEDE25DAD4FE001FF44A /* Assets.xcassets */; };
 		E0BBAEE225DAD4FE001FF44A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0BBAEE025DAD4FE001FF44A /* LaunchScreen.storyboard */; };
+		E0BBAEEB25DADF5D001FF44A /* RoundedeShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAEEA25DADF5D001FF44A /* RoundedeShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E0BBAEDE25DAD4FE001FF44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0BBAEE125DAD4FE001FF44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0BBAEE325DAD4FF001FF44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0BBAEEA25DADF5D001FF44A /* RoundedeShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedeShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */,
 				E0BBAED925DAD4FC001FF44A /* ViewController.swift */,
 				E0BBAEDB25DAD4FC001FF44A /* Main.storyboard */,
+				E0BBAEEA25DADF5D001FF44A /* RoundedeShadowView.swift */,
 				E0BBAEDE25DAD4FE001FF44A /* Assets.xcassets */,
 				E0BBAEE025DAD4FE001FF44A /* LaunchScreen.storyboard */,
 				E0BBAEE325DAD4FF001FF44A /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				E0BBAEDA25DAD4FC001FF44A /* ViewController.swift in Sources */,
 				E0BBAED625DAD4FC001FF44A /* AppDelegate.swift in Sources */,
+				E0BBAEEB25DADF5D001FF44A /* RoundedeShadowView.swift in Sources */,
 				E0BBAED825DAD4FC001FF44A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

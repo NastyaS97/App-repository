@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var maneView: UIView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
