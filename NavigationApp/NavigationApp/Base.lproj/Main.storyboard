@@ -12,7 +12,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="41.5" y="216" width="331" height="552"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
-                                        <rect key="frame" x="25" y="25" width="281" height="434"/>
+                                        <rect key="frame" x="25" y="25" width="281" height="440"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-43-LFa" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="281" height="128"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Name"/>
@@ -31,7 +31,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-93-a9H" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="153" width="281" height="128"/>
+                                                <rect key="frame" x="0.0" y="75" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Location"/>
@@ -39,13 +39,34 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-Bu-6uZ" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="306" width="281" height="128"/>
+                                                <rect key="frame" x="0.0" y="150" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="Occupation"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="IOS Developer"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-ar-rah">
+                                                <rect key="frame" x="0.0" y="225" width="281" height="150"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="wtL-g3-K2M"/>
+                                                </constraints>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
+                                                <rect key="frame" x="0.0" y="400" width="281" height="40"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                <state key="normal" title="Change inform">
+                                                    <color key="titleColor" red="0.16304203680000001" green="0.36124388699999999" blue="0.1525914256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Ydl-Dw-dNo" kind="show" id="5Lc-UB-bBZ"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -72,17 +93,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
-                                <rect key="frame" x="132" y="703" width="150" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                <state key="normal" title="Change inform">
-                                    <color key="titleColor" red="0.16304203680000001" green="0.36124388699999999" blue="0.1525914256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Ydl-Dw-dNo" kind="show" id="5Lc-UB-bBZ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -93,9 +103,21 @@
                             <constraint firstItem="ucv-cT-UV3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="yAC-54-xaP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="User Profile" id="KeM-oU-lpT"/>
+                    <navigationItem key="navigationItem" title="User Profile" id="KeM-oU-lpT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Nxi-Lw-EBD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" image="square.and.arrow.up" catalog="system" id="KJC-CP-We0">
+                            <color key="tintColor" red="0.16304203680000001" green="0.36124388699999999" blue="0.1525914256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="eQX-K0-8Og"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="editinfoButton" destination="zTn-47-PLu" id="be1-LG-xox"/>
+                        <outlet property="locationView" destination="SWv-93-a9H" id="Ruf-BX-cWA"/>
                         <outlet property="maneView" destination="ucv-cT-UV3" id="bLa-Zj-rPu"/>
+                        <outlet property="nameView" destination="Md7-43-LFa" id="b7v-lm-pq3"/>
+                        <outlet property="occupetionView" destination="aSV-Bu-6uZ" id="5Mg-EV-jZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -109,6 +131,16 @@
                     <view key="view" contentMode="scaleToFill" id="Tf0-tc-iA1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="google.com" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MkZ-HE-6Ry">
+                                <rect key="frame" x="53" y="141" width="309" height="256"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" returnKeyType="continue" textContentType="url"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0cL-t7-rKI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -116,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UcB-VI-A8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1371" y="108"/>
+            <point key="canvasLocation" x="1369.5652173913045" y="93.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ENw-nj-TG5">
@@ -148,6 +180,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
