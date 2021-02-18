@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E0AC03C925DE760A000C5963 /* EditinfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC03C825DE7609000C5963 /* EditinfoController.swift */; };
+		E0B198A225DEEA990062D83A /* NAUserCardinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */; };
+		E0B198A525DEEB170062D83A /* NPLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B198A425DEEB170062D83A /* NPLocation.swift */; };
 		E0BBAED625DAD4FC001FF44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAED525DAD4FC001FF44A /* AppDelegate.swift */; };
 		E0BBAED825DAD4FC001FF44A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */; };
 		E0BBAEDA25DAD4FC001FF44A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAED925DAD4FC001FF44A /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		E0AC03C825DE7609000C5963 /* EditinfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditinfoController.swift; sourceTree = "<group>"; };
+		E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserCardinfo.swift; sourceTree = "<group>"; };
+		E0B198A425DEEB170062D83A /* NPLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPLocation.swift; sourceTree = "<group>"; };
 		E0BBAED225DAD4FC001FF44A /* NavigationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BBAED525DAD4FC001FF44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E0B1989825DEE7C30062D83A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0BBAEDE25DAD4FE001FF44A /* Assets.xcassets */,
+				E0BBAEE025DAD4FE001FF44A /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E0B1989B25DEE8380062D83A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0BBAEF625DAF047001FF44A /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E0B1989C25DEE8950062D83A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E0BBAED925DAD4FC001FF44A /* ViewController.swift */,
+				E0AC03C825DE7609000C5963 /* EditinfoController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E0B1989D25DEE8B20062D83A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0B1989E25DEE8DD0062D83A /* Xibs */,
+				E0BBAEEA25DADF5D001FF44A /* RoundedeShadowView.swift */,
+				E0BBAEF025DAEDCA001FF44A /* TitleDescriptionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0B1989E25DEE8DD0062D83A /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				E0BBAEF325DAEE0F001FF44A /* TitleDescriptionView.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		E0B198A025DEE98A0062D83A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */,
+				E0B198A425DEEB170062D83A /* NPLocation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E0BBAEC925DAD4FC001FF44A = {
 			isa = PBXGroup;
 			children = (
@@ -66,17 +123,14 @@
 		E0BBAED425DAD4FC001FF44A /* NavigationApp */ = {
 			isa = PBXGroup;
 			children = (
+				E0B198A025DEE98A0062D83A /* Models */,
+				E0B1989D25DEE8B20062D83A /* Views */,
+				E0B1989C25DEE8950062D83A /* Controllers */,
+				E0B1989B25DEE8380062D83A /* Extensions */,
+				E0B1989825DEE7C30062D83A /* Resources */,
 				E0BBAED525DAD4FC001FF44A /* AppDelegate.swift */,
 				E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */,
-				E0BBAED925DAD4FC001FF44A /* ViewController.swift */,
 				E0BBAEDB25DAD4FC001FF44A /* Main.storyboard */,
-				E0AC03C825DE7609000C5963 /* EditinfoController.swift */,
-				E0BBAEF025DAEDCA001FF44A /* TitleDescriptionView.swift */,
-				E0BBAEF625DAF047001FF44A /* UIView+Ext.swift */,
-				E0BBAEF325DAEE0F001FF44A /* TitleDescriptionView.xib */,
-				E0BBAEEA25DADF5D001FF44A /* RoundedeShadowView.swift */,
-				E0BBAEDE25DAD4FE001FF44A /* Assets.xcassets */,
-				E0BBAEE025DAD4FE001FF44A /* LaunchScreen.storyboard */,
 				E0BBAEE325DAD4FF001FF44A /* Info.plist */,
 			);
 			path = NavigationApp;
@@ -155,7 +209,9 @@
 			files = (
 				E0BBAEDA25DAD4FC001FF44A /* ViewController.swift in Sources */,
 				E0BBAED625DAD4FC001FF44A /* AppDelegate.swift in Sources */,
+				E0B198A525DEEB170062D83A /* NPLocation.swift in Sources */,
 				E0BBAEF725DAF047001FF44A /* UIView+Ext.swift in Sources */,
+				E0B198A225DEEA990062D83A /* NAUserCardinfo.swift in Sources */,
 				E0BBAEEB25DADF5D001FF44A /* RoundedeShadowView.swift in Sources */,
 				E0BBAED825DAD4FC001FF44A /* SceneDelegate.swift in Sources */,
 				E0BBAEF125DAEDCA001FF44A /* TitleDescriptionView.swift in Sources */,

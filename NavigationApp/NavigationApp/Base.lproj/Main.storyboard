@@ -19,10 +19,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucv-cT-UV3" customClass="RoundedeShadowView" customModule="NavigationApp" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="216" width="331" height="552"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
                                         <rect key="frame" x="25" y="25" width="281" height="440"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-43-LFa" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-43-LFa" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -30,7 +30,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="Anastasiya Soiko"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-93-a9H" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-93-a9H" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="75" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -38,7 +38,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="Belarus"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-Bu-6uZ" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-Bu-6uZ" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="150" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -46,7 +46,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="IOS Developer"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-ar-rah">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-ar-rah">
                                                 <rect key="frame" x="0.0" y="225" width="281" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -57,14 +57,14 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
                                                 <rect key="frame" x="0.0" y="400" width="281" height="40"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                                 <state key="normal" title="Change inform">
                                                     <color key="titleColor" red="0.16304203680000001" green="0.36124388699999999" blue="0.1525914256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="Ydl-Dw-dNo" kind="presentation" id="vbS-Ue-3z1"/>
+                                                    <segue destination="Ydl-Dw-dNo" kind="presentation" identifier="editProfile" id="vbS-Ue-3z1"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -129,11 +129,11 @@
             <objects>
                 <viewController id="Ydl-Dw-dNo" customClass="EditinfoController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tf0-tc-iA1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4LV-H4-w82">
-                                <rect key="frame" x="35" y="123" width="344" height="315"/>
+                                <rect key="frame" x="35" y="35" width="344" height="315"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tg-H8-TR2">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>

@@ -9,6 +9,8 @@ import UIKit
 
 class EditinfoController: UIViewController {
 
+    var userCardInfo: NPUserCardinfo?
+    
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var infoTextFiel: UITextField!
     @IBOutlet weak var textField: UITextView!
@@ -36,6 +38,10 @@ class EditinfoController: UIViewController {
         // 3 way
         self.saveButton.addTarget(self, action: #selector(self.saveButtonTapped),
                                   for: .touchUpInside)
+        
+        self.infoTextFiel.text = self.userCardInfo?.name
+//        self.textField.text = self.
+        
     }
     
     @objc func saveButtonTapped() {

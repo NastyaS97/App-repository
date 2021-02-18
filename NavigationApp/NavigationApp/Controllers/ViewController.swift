@@ -8,17 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //MARK: - outlets
-    @IBOutlet weak var maneView: UIView!
     
+    //MARK: - variables
+    
+    let userCardInfo = NAUserCardinfo
+    
+    //MARK: - outlets
+    
+    @IBOutlet weak var maneView: UIView!
     @IBOutlet weak var nameView: TitleDescriptionView!
     @IBOutlet weak var locationView: TitleDescriptionView!
     @IBOutlet weak var occupetionView: TitleDescriptionView!
     @IBOutlet weak var editinfoButton: UIButton!
     
+    // MARK: - life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.nameView.descriptionText = self.userCardInfo.name
+        self.locationView.descriptionText = self.userCardInfo.location
+        self.occupetionView.descriptionText = self.userCardInfo.occupation
+        
     }
 
     @IBAction func shareButtonTapped(_ sender: Any) {
@@ -30,5 +41,8 @@ class ViewController: UIViewController {
             print("I was presented")
         }
     }
+    //MARK: - prepare for segue
+    
+    override func prepare
 }
 
