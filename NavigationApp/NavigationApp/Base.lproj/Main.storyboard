@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Evl-tY-MTH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -8,22 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--User Profile-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chk-Fz-DPo">
-                                <rect key="frame" x="61" y="81" width="281" height="55"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucv-cT-UV3" customClass="RoundedeShadowView" customModule="NavigationApp" customModuleProvider="target">
-                                <rect key="frame" x="41.5" y="172" width="331" height="552"/>
+                                <rect key="frame" x="41.5" y="216" width="331" height="552"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
                                         <rect key="frame" x="25" y="25" width="281" height="434"/>
@@ -78,25 +72,77 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
+                                <rect key="frame" x="132" y="703" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Change inform">
+                                    <color key="titleColor" red="0.16304203680000001" green="0.36124388699999999" blue="0.1525914256" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ydl-Dw-dNo" kind="show" id="5Lc-UB-bBZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chk-Fz-DPo" secondAttribute="trailing" constant="72" id="7xg-eO-GK0"/>
-                            <constraint firstItem="chk-Fz-DPo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="61" id="84G-KN-vPH"/>
-                            <constraint firstItem="chk-Fz-DPo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="FQ5-Fk-07F"/>
                             <constraint firstItem="ucv-cT-UV3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dB6-Ko-fM9"/>
                             <constraint firstItem="ucv-cT-UV3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="kPP-8t-ays"/>
-                            <constraint firstItem="ucv-cT-UV3" firstAttribute="top" secondItem="chk-Fz-DPo" secondAttribute="bottom" constant="69" id="qXJ-lR-lTO"/>
                             <constraint firstItem="ucv-cT-UV3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v3s-Ay-1F1"/>
                             <constraint firstItem="ucv-cT-UV3" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="yAC-54-xaP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="User Profile" id="KeM-oU-lpT"/>
                     <connections>
                         <outlet property="maneView" destination="ucv-cT-UV3" id="bLa-Zj-rPu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697.10144927536237" y="93.75"/>
+        </scene>
+        <!--Edit Profile-->
+        <scene sceneID="QMO-26-dmr">
+            <objects>
+                <viewController id="Ydl-Dw-dNo" customClass="EditinfoController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tf0-tc-iA1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0cL-t7-rKI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="vuW-3h-gc5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UcB-VI-A8W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1371" y="108"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ENw-nj-TG5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Evl-tY-MTH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="jBZ-e2-K68">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.91162916877532862" blue="0.63720030590515464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="36"/>
+                            <color key="textColor" red="0.16304203678452392" green="0.36124388704594879" blue="0.15259142563008263" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" red="0.91352076510000002" green="1" blue="0.99080196669999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name=".SFUI-Regular" family=".AppleSystemUIFont" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="doh-M6-S6m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbs-9z-hc8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-213.04347826086959" y="93.75"/>
         </scene>

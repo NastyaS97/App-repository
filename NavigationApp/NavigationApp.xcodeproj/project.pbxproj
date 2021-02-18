@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E0AC03C925DE760A000C5963 /* EditinfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC03C825DE7609000C5963 /* EditinfoController.swift */; };
 		E0BBAED625DAD4FC001FF44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAED525DAD4FC001FF44A /* AppDelegate.swift */; };
 		E0BBAED825DAD4FC001FF44A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */; };
 		E0BBAEDA25DAD4FC001FF44A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BBAED925DAD4FC001FF44A /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E0AC03C825DE7609000C5963 /* EditinfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditinfoController.swift; sourceTree = "<group>"; };
 		E0BBAED225DAD4FC001FF44A /* NavigationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0BBAED525DAD4FC001FF44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */,
 				E0BBAED925DAD4FC001FF44A /* ViewController.swift */,
 				E0BBAEDB25DAD4FC001FF44A /* Main.storyboard */,
+				E0AC03C825DE7609000C5963 /* EditinfoController.swift */,
 				E0BBAEF025DAEDCA001FF44A /* TitleDescriptionView.swift */,
 				E0BBAEF625DAF047001FF44A /* UIView+Ext.swift */,
 				E0BBAEF325DAEE0F001FF44A /* TitleDescriptionView.xib */,
@@ -156,6 +159,7 @@
 				E0BBAEEB25DADF5D001FF44A /* RoundedeShadowView.swift in Sources */,
 				E0BBAED825DAD4FC001FF44A /* SceneDelegate.swift in Sources */,
 				E0BBAEF125DAEDCA001FF44A /* TitleDescriptionView.swift in Sources */,
+				E0AC03C925DE760A000C5963 /* EditinfoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
