@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     //MARK: - variables
     
-    let userCardInfo = NAUserCardinfo
+    let userCardInfo = NAUserCardinfo()
     
     //MARK: - outlets
     
@@ -19,16 +19,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameView: TitleDescriptionView!
     @IBOutlet weak var locationView: TitleDescriptionView!
     @IBOutlet weak var occupetionView: TitleDescriptionView!
+    @IBOutlet weak var infoView: UITextView!
     @IBOutlet weak var editinfoButton: UIButton!
     
     // MARK: - life cycle
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nameView.descriptionText = self.userCardInfo.name
-        self.locationView.descriptionText = self.userCardInfo.location
-        self.occupetionView.descriptionText = self.userCardInfo.occupation
+        self.nameView.descriptionalText = self.userCardInfo.name
+        self.locationView.descriptionalText = self.userCardInfo.location.rawValue
+        self.occupetionView.descriptionalText = self.userCardInfo.occupation
         
     }
 
@@ -42,7 +49,14 @@ class ViewController: UIViewController {
         }
     }
     //MARK: - prepare for segue
-    
-    override func prepare
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "editProfile":
+            if let controller = segue.destination as? EditinfoController {
+                controller.userCardInfo = self.userCardInfo
+            }
+        default:
+            break
+        }
+    }
 }
-

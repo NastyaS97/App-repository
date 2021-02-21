@@ -9,7 +9,7 @@ import UIKit
 
 class EditinfoController: UIViewController {
 
-    var userCardInfo: NPUserCardinfo?
+    var userCardInfo: NAUserCardinfo?
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var infoTextFiel: UITextField!
@@ -40,7 +40,7 @@ class EditinfoController: UIViewController {
                                   for: .touchUpInside)
         
         self.infoTextFiel.text = self.userCardInfo?.name
-//        self.textField.text = self.
+        self.textField.text = self.userCardInfo?.info
         
     }
     
