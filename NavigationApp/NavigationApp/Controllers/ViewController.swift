@@ -24,19 +24,45 @@ class ViewController: UIViewController {
     
     // MARK: - life cycle
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        self.setViewdata()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        print("viewWillAppear")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    
+        self.setViewdata()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        print("viewWillDisappear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        print("viewDidDisappear")
+    }
+
+    
+    // MARK: - set data
+    
+    func setViewdata() {
         self.nameView.descriptionalText = self.userCardInfo.name
         self.locationView.descriptionalText = self.userCardInfo.location.rawValue
         self.occupetionView.descriptionalText = self.userCardInfo.occupation
-        
+        self.infoView.text = self.userCardInfo.info
     }
 
     @IBAction func shareButtonTapped(_ sender: Any) {
@@ -58,5 +84,10 @@ class ViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    @IBAction func unwindToCard(_ unwindSegue: UIStoryboardSegue) {
+        print(unwindSegue.source)
+        print(unwindSegue.destination)
     }
 }

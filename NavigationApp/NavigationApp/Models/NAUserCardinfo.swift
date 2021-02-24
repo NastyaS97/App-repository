@@ -9,8 +9,8 @@ import Foundation
 
 
 class NAUserCardinfo {
-    let name: String = "Anastasiya"
+    var name: String = "Anastasiya"
     var occupation: String = "June IOS Developer"
     var location: NPLocation = .minsk
-    var info: String = "Hey"
+    var info: String = "Hey. I'm person"
 }

@@ -15,6 +15,13 @@ class EditinfoController: UIViewController {
     @IBOutlet weak var infoTextFiel: UITextField!
     @IBOutlet weak var textField: UITextView!
     
+    // MARK: - view life cycle
+    
+    private func setModelData() {
+        guard let userModel = self.userCardInfo else { return }
+        userModel.name = self.textField.text ?? ""
+        userModel.info = self.textField.text ?? ""
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,12 +46,22 @@ class EditinfoController: UIViewController {
         self.saveButton.addTarget(self, action: #selector(self.saveButtonTapped),
                                   for: .touchUpInside)
         
-        self.infoTextFiel.text = self.userCardInfo?.name
-        self.textField.text = self.userCardInfo?.info
+        self.setViewData()
         
     }
     
+    // MARK: - setting view data
+    
+    private func setViewData() {
+        self.infoTextFiel.text = self.userCardInfo?.name
+        self.textField.text = self.userCardInfo?.info
+    }
+    
+    // MARK: - actions
+    
     @objc func saveButtonTapped() {
+        self.setModelData()
+        
         self.dismiss(animated: true, completion: nil) // if cotroller was presented
 //        self.navigationController?.popViewController(animated: true) //  возврат к предыдущей странице после нажатия кнопки if cotroller was pushed
     }
