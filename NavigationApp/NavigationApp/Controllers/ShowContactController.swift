@@ -7,14 +7,39 @@
 
 import UIKit
 
+protocol ShowContactController: class {
+    func dateOfBirthDidChange(picker: UIDatePicker, birthDate: Date)
+    
+}
+
 class ShowContactController: UIViewController, UITextFieldDelegate {
+    
+    week var delegate: ShowContactController?
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var dateOfBirth: UITextField! {
+        didSet {
+            self.dateOfBirth.inputView = self.datePicker
+        }
+    }
+    
+    private lazy var datePicker: UIDatePicker = {
+        let picker = UIDatePicker()
+        picker.datePickerMode = .date
+        picker.preferredDatePickerStyle = .wheels
+        picker.maximumDate = Date()
+        picker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
+        
+        
+        return picker
+    }()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(viewDidTapped)))
         
         self.emailTextField.textContentType = .emailAddress
         self.emailTextField.keyboardType = .emailAddress
@@ -23,6 +48,15 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
         
         self.emailTextField.delegate = self
         self.phoneTextField.delegate = self
+    }
+    
+    @objc private func datePickerValueChanged(_ datePicker: UIDatePicker) {
+        self.dateOfBirth.text = datePicker.date.toString
+        print(datePicker.date.toString)
+    }
+    
+    @objc private func viewDidTapped() {
+        self.view.endEditing(true)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {

@@ -12,17 +12,17 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NavigationApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucv-cT-UV3" customClass="RoundedeShadowView" customModule="NavigationApp" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="216" width="331" height="552"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tea-PL-F5E">
                                         <rect key="frame" x="25" y="25" width="281" height="475"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-43-LFa" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Md7-43-LFa" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -30,7 +30,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="Anastasiya Soiko"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-93-a9H" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWv-93-a9H" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="70" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -38,7 +38,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="Belarus"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjr-I4-cDt" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yjr-I4-cDt" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="140" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -46,7 +46,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="34098359"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-Bu-6uZ" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSV-Bu-6uZ" customClass="TitleDescriptionView" customModule="NavigationApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="210" width="281" height="50"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <userDefinedRuntimeAttributes>
@@ -54,7 +54,7 @@
                                                     <userDefinedRuntimeAttribute type="string" keyPath="descriptionalText" value="IOS Developer"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-ar-rah">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3I-ar-rah">
                                                 <rect key="frame" x="0.0" y="280" width="281" height="75"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -65,7 +65,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-47-PLu">
                                                 <rect key="frame" x="0.0" y="375" width="281" height="40"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                                 <state key="normal" title="Change inform">
@@ -75,7 +75,7 @@
                                                     <segue destination="Ydl-Dw-dNo" kind="presentation" identifier="editProfile" id="vbS-Ue-3z1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCM-kP-dir">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCM-kP-dir">
                                                 <rect key="frame" x="0.0" y="435" width="281" height="40"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                                 <state key="normal" title="Show contact">
@@ -254,7 +254,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="iAG-rR-v12">
-                                <rect key="frame" x="35" y="123" width="344" height="199"/>
+                                <rect key="frame" x="35" y="123" width="344" height="283.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trh-OU-xZE">
                                         <rect key="frame" x="0.0" y="0.0" width="344" height="20.5"/>
@@ -278,8 +278,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgP-rD-9ae">
+                                        <rect key="frame" x="0.0" y="169" width="344" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Vn-ml-b7S">
+                                        <rect key="frame" x="0.0" y="204.5" width="344" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="dateOfBirthTextField:" destination="aHw-Bu-Dah" eventType="editingDidEnd" id="5Qq-fX-k9K"/>
+                                        </connections>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XjD-hW-4IU">
-                                        <rect key="frame" x="0.0" y="169" width="344" height="30"/>
+                                        <rect key="frame" x="0.0" y="253.5" width="344" height="30"/>
                                         <state key="normal" title="Close"/>
                                         <connections>
                                             <segue destination="aHw-Bu-Dah" kind="unwind" unwindAction="unwindToCard:" id="Kk4-f2-rh5"/>
@@ -299,6 +313,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Show contact" id="tyk-fi-7A5"/>
                     <connections>
+                        <outlet property="dateOfBirth" destination="6Vn-ml-b7S" id="oRZ-XC-R32"/>
                         <outlet property="emailTextField" destination="LRQ-NR-LqB" id="KTg-DJ-htA"/>
                         <outlet property="phoneTextField" destination="lFF-An-DrV" id="Smd-n6-C70"/>
                     </connections>

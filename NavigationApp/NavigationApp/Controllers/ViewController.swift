@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, ShowContactControllerDelegate {
     
     //MARK: - variables
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var occupetionView: TitleDescriptionView!
     @IBOutlet weak var infoView: UITextView!
     @IBOutlet weak var editinfoButton: UIButton!
+    
     
     // MARK: - life cycle
     
@@ -81,6 +83,10 @@ class ViewController: UIViewController {
             if let controller = segue.destination as? EditinfoController {
                 controller.userCardInfo = self.userCardInfo
             }
+        case "showContact":
+            if let controller = segue.destination as? ShowContactController {
+                controller.delegate = self
+            }
         default:
             break
         }
@@ -89,5 +95,9 @@ class ViewController: UIViewController {
     @IBAction func unwindToCard(_ unwindSegue: UIStoryboardSegue) {
         print(unwindSegue.source)
         print(unwindSegue.destination)
+    }
+    
+    func dateOfBirthDidChaged(picker: UIDatePicker, birthDate: Date) {
+        print(birthDate.toString)
     }
 }

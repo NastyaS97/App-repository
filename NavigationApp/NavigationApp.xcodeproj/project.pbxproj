@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E00A8CB125E8265600234F5D /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00A8CB025E8265600234F5D /* Date+Ex.swift */; };
 		E0AC03C925DE760A000C5963 /* EditinfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC03C825DE7609000C5963 /* EditinfoController.swift */; };
 		E0B198A225DEEA990062D83A /* NAUserCardinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */; };
 		E0B198A525DEEB170062D83A /* NPLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B198A425DEEB170062D83A /* NPLocation.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E00A8CB025E8265600234F5D /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
 		E0AC03C825DE7609000C5963 /* EditinfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditinfoController.swift; sourceTree = "<group>"; };
 		E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserCardinfo.swift; sourceTree = "<group>"; };
 		E0B198A425DEEB170062D83A /* NPLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPLocation.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				E0BBAEF625DAF047001FF44A /* UIView+Ext.swift */,
+				E00A8CB025E8265600234F5D /* Date+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -75,6 +78,7 @@
 			children = (
 				E0BBAED925DAD4FC001FF44A /* ViewController.swift */,
 				E0AC03C825DE7609000C5963 /* EditinfoController.swift */,
+				E0B748D225E70DF8001E09CF /* ShowContactController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -133,7 +137,6 @@
 				E0BBAED525DAD4FC001FF44A /* AppDelegate.swift */,
 				E0BBAED725DAD4FC001FF44A /* SceneDelegate.swift */,
 				E0BBAEDB25DAD4FC001FF44A /* Main.storyboard */,
-				E0B748D225E70DF8001E09CF /* ShowContactController.swift */,
 				E0BBAEE325DAD4FF001FF44A /* Info.plist */,
 			);
 			path = NavigationApp;
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E00A8CB125E8265600234F5D /* Date+Ex.swift in Sources */,
 				E0BBAEDA25DAD4FC001FF44A /* ViewController.swift in Sources */,
 				E0B748D325E70DF8001E09CF /* ShowContactController.swift in Sources */,
 				E0BBAED625DAD4FC001FF44A /* AppDelegate.swift in Sources */,
