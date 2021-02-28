@@ -28,7 +28,7 @@ class TitleDescriptionView: UIView {
     }
     
     
-    //MARK: IBOtlet
+    // MARK: - IBOtlet
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -49,6 +49,4 @@ class TitleDescriptionView: UIView {
     func initView() {
         self.loadFromNib()
     }
-    
-    
 }

@@ -10,7 +10,6 @@ import UIKit
 class EditinfoController: UIViewController {
 
     var userCardInfo: NAUserCardinfo?
-    
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var infoTextFiel: UITextField!
     @IBOutlet weak var textField: UITextView!
@@ -41,13 +40,10 @@ class EditinfoController: UIViewController {
 //        }
 //        self.saveButton.addAction(saveButtonAction, for: .touchUpInside)
         
-        
         // 3 way
         self.saveButton.addTarget(self, action: #selector(self.saveButtonTapped),
                                   for: .touchUpInside)
-        
         self.setViewData()
-        
     }
     
     // MARK: - setting view data
@@ -61,8 +57,8 @@ class EditinfoController: UIViewController {
     
     @objc func saveButtonTapped() {
         self.setModelData()
-        
-        self.dismiss(animated: true, completion: nil) // if cotroller was presented
+        self.dismiss(animated: true,
+                     completion: nil) // if cotroller was presented
 //        self.navigationController?.popViewController(animated: true) //  возврат к предыдущей странице после нажатия кнопки if cotroller was pushed
     }
 

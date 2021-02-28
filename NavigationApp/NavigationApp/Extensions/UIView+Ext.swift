@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIView {
-    
     public static var nibName: String {
         return String(describing: Self.self)
     }

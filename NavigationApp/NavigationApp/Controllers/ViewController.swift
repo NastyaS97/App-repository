@@ -9,8 +9,7 @@ import UIKit
 
 
 class ViewController: UIViewController, ShowContactControllerDelegate {
-    
-    
+
     //MARK: - variables
     
     let userCardInfo = NAUserCardinfo()
@@ -24,41 +23,33 @@ class ViewController: UIViewController, ShowContactControllerDelegate {
     @IBOutlet weak var infoView: UITextView!
     @IBOutlet weak var editinfoButton: UIButton!
     
-    
     // MARK: - life cycle
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         self.setViewdata()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         print("viewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    
         self.setViewdata()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
         print("viewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
         print("viewDidDisappear")
     }
 
-    
     // MARK: - set data
     
     func setViewdata() {
@@ -71,13 +62,15 @@ class ViewController: UIViewController, ShowContactControllerDelegate {
     @IBAction func shareButtonTapped(_ sender: Any) {
         let text = "Hellow, i'm app"
         guard let url = URL(string: "google.com") else { return }
-        let activityController = UIActivityViewController(activityItems: [text, url], applicationActivities: nil)
-        
+        let activityController = UIActivityViewController(activityItems: [text, url],
+                                                          applicationActivities: nil)
         self.present(activityController, animated: true) {
             print("I was presented")
         }
     }
-    //MARK: - prepare for segue
+    
+    // MARK: - prepare for segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "editProfile":

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class NAUserCardinfo {
     var name: String = "Anastasiya"
     var occupation: String = "June IOS Developer"

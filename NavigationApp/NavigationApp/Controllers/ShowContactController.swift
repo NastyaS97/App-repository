@@ -31,22 +31,18 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
         picker.preferredDatePickerStyle = .wheels
         picker.maximumDate = Date()
         picker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
-        
-        
         return picker
     }()
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(viewDidTapped)))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                              action: #selector(viewDidTapped)))
         
         self.emailTextField.textContentType = .emailAddress
         self.emailTextField.keyboardType = .emailAddress
         self.phoneTextField.keyboardType = .numberPad
         self.phoneTextField.textContentType = .telephoneNumber
-        
         self.emailTextField.delegate = self
         self.phoneTextField.delegate = self
     }
@@ -76,8 +72,9 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
         if textField.textContentType == .some(.emailAddress) {
             print("I'm email")
             return true
@@ -94,4 +91,3 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
         }
     }
 }
-

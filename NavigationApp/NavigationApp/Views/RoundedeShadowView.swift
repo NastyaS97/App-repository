@@ -29,7 +29,7 @@ class RoundedeShadowView: UIView {
         }
     }
     @IBInspectable
-    var shadowColor: UIColor = UIColor.black{
+    var shadowColor: UIColor = UIColor.black {
         didSet {
             self.layer.shadowColor = self.shadowColor.cgColor
         }
