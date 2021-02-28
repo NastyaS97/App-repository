@@ -13,4 +13,5 @@ class NAUserCardinfo {
     var occupation: String = "June IOS Developer"
     var location: NPLocation = .minsk
     var info: String = "Hey. I'm person"
+    var email: String = "test@gmail.com"
 }

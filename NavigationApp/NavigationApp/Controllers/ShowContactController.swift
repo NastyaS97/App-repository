@@ -7,14 +7,15 @@
 
 import UIKit
 
-protocol ShowContactController: class {
+protocol ShowContactControllerDelegate: class {
     func dateOfBirthDidChange(picker: UIDatePicker, birthDate: Date)
+    func emailDidChanged(email: String)
     
 }
 
 class ShowContactController: UIViewController, UITextFieldDelegate {
     
-    week var delegate: ShowContactController?
+    weak var delegate: ShowContactControllerDelegate?
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -52,7 +53,8 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
     
     @objc private func datePickerValueChanged(_ datePicker: UIDatePicker) {
         self.dateOfBirth.text = datePicker.date.toString
-        print(datePicker.date.toString)
+        self.delegate?.dateOfBirthDidChange(picker: datePicker,
+                                            birthDate: datePicker.date)
     }
     
     @objc private func viewDidTapped() {
@@ -60,7 +62,9 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
+        if textField == self.emailTextField {
+            self.delegate?.emailDidChanged(email: textField.text ?? "")
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

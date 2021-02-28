@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, ShowContactControllerDelegate {
     
+    
     //MARK: - variables
     
     let userCardInfo = NAUserCardinfo()
@@ -97,7 +98,12 @@ class ViewController: UIViewController, ShowContactControllerDelegate {
         print(unwindSegue.destination)
     }
     
-    func dateOfBirthDidChaged(picker: UIDatePicker, birthDate: Date) {
+    func dateOfBirthDidChange(picker: UIDatePicker, birthDate: Date) {
         print(birthDate.toString)
+    }
+    
+    func emailDidChanged(email: String) {
+        self.userCardInfo.email = email
+        self.setViewdata()
     }
 }
