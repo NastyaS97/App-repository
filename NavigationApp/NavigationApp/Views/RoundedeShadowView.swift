@@ -28,10 +28,4 @@ class RoundedeShadowView: UIView {
             self.layer.shadowOpacity = self.shadowOpacity
         }
     }
-    @IBInspectable
-    var shadowColor: UIColor = UIColor.black {
-        didSet {
-            self.layer.shadowColor = self.shadowColor.cgColor
-        }
-    }
 }
