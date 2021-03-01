@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E00A8CB125E8265600234F5D /* Date+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00A8CB025E8265600234F5D /* Date+Ex.swift */; };
-		E057EAE525EC0AB500D7DCBF /* swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = E057EAE425EC0AB500D7DCBF /* swiftlint.yml */; };
 		E0AC03C925DE760A000C5963 /* EditinfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AC03C825DE7609000C5963 /* EditinfoController.swift */; };
 		E0B198A225DEEA990062D83A /* NAUserCardinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */; };
 		E0B198A525DEEB170062D83A /* NPLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B198A425DEEB170062D83A /* NPLocation.swift */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		E00A8CB025E8265600234F5D /* Date+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ex.swift"; sourceTree = "<group>"; };
-		E057EAE425EC0AB500D7DCBF /* swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
 		E0AC03C825DE7609000C5963 /* EditinfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditinfoController.swift; sourceTree = "<group>"; };
 		E0B198A125DEEA990062D83A /* NAUserCardinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAUserCardinfo.swift; sourceTree = "<group>"; };
 		E0B198A425DEEB170062D83A /* NPLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NPLocation.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 		E0BBAEC925DAD4FC001FF44A = {
 			isa = PBXGroup;
 			children = (
-				E057EAE425EC0AB500D7DCBF /* swiftlint.yml */,
 				E0BBAED425DAD4FC001FF44A /* NavigationApp */,
 				E0BBAED325DAD4FC001FF44A /* Products */,
 			);
@@ -152,7 +149,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0BBAEE625DAD4FF001FF44A /* Build configuration list for PBXNativeTarget "NavigationApp" */;
 			buildPhases = (
-				E057EAE725EC0EEB00D7DCBF /* ShellScript */,
+				E057EAE725EC0EEB00D7DCBF /* SwiftLint */,
 				E0BBAECE25DAD4FC001FF44A /* Sources */,
 				E0BBAECF25DAD4FC001FF44A /* Frameworks */,
 				E0BBAED025DAD4FC001FF44A /* Resources */,
@@ -204,7 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0BBAEE225DAD4FE001FF44A /* LaunchScreen.storyboard in Resources */,
-				E057EAE525EC0AB500D7DCBF /* swiftlint.yml in Resources */,
 				E0BBAEDF25DAD4FE001FF44A /* Assets.xcassets in Resources */,
 				E0BBAEF425DAEE0F001FF44A /* TitleDescriptionView.xib in Resources */,
 				E0BBAEDD25DAD4FC001FF44A /* Main.storyboard in Resources */,
@@ -214,7 +210,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E057EAE725EC0EEB00D7DCBF /* ShellScript */ = {
+		E057EAE725EC0EEB00D7DCBF /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -223,14 +219,14 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n  exit 1\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

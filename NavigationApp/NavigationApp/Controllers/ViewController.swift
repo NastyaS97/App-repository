@@ -7,51 +7,40 @@
 
 import UIKit
 
-
 class ViewController: UIViewController, ShowContactControllerDelegate {
 
     //MARK: - variables
-    
     let userCardInfo = NAUserCardinfo()
-    
     //MARK: - outlets
-    
     @IBOutlet weak var maneView: UIView!
     @IBOutlet weak var nameView: TitleDescriptionView!
     @IBOutlet weak var locationView: TitleDescriptionView!
     @IBOutlet weak var occupetionView: TitleDescriptionView!
     @IBOutlet weak var infoView: UITextView!
     @IBOutlet weak var editinfoButton: UIButton!
-    
     // MARK: - life cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setViewdata()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.setViewdata()
     }
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("viewWillDisappear")
     }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         print("viewDidDisappear")
     }
 
     // MARK: - set data
-    
     func setViewdata() {
         self.nameView.descriptionalText = self.userCardInfo.name
         self.locationView.descriptionalText = self.userCardInfo.location.rawValue
@@ -68,9 +57,7 @@ class ViewController: UIViewController, ShowContactControllerDelegate {
             print("I was presented")
         }
     }
-    
     // MARK: - prepare for segue
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "editProfile":
@@ -85,16 +72,13 @@ class ViewController: UIViewController, ShowContactControllerDelegate {
             break
         }
     }
-    
     @IBAction func unwindToCard(_ unwindSegue: UIStoryboardSegue) {
         print(unwindSegue.source)
         print(unwindSegue.destination)
     }
-    
     func dateOfBirthDidChange(picker: UIDatePicker, birthDate: Date) {
         print(birthDate.toString)
     }
-    
     func emailDidChanged(email: String) {
         self.userCardInfo.email = email
         self.setViewdata()

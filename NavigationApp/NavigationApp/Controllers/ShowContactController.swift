@@ -10,13 +10,10 @@ import UIKit
 protocol ShowContactControllerDelegate: class {
     func dateOfBirthDidChange(picker: UIDatePicker, birthDate: Date)
     func emailDidChanged(email: String)
-    
 }
 
 class ShowContactController: UIViewController, UITextFieldDelegate {
-    
     weak var delegate: ShowContactControllerDelegate?
-    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var dateOfBirth: UITextField! {
@@ -24,7 +21,6 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
             self.dateOfBirth.inputView = self.datePicker
         }
     }
-    
     private lazy var datePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .date
@@ -38,7 +34,6 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.view.addGestureRecognizer(UITapGestureRecognizer(target: self,
                                                               action: #selector(viewDidTapped)))
-        
         self.emailTextField.textContentType = .emailAddress
         self.emailTextField.keyboardType = .emailAddress
         self.phoneTextField.keyboardType = .numberPad
@@ -46,32 +41,26 @@ class ShowContactController: UIViewController, UITextFieldDelegate {
         self.emailTextField.delegate = self
         self.phoneTextField.delegate = self
     }
-    
     @objc private func datePickerValueChanged(_ datePicker: UIDatePicker) {
         self.dateOfBirth.text = datePicker.date.toString
         self.delegate?.dateOfBirthDidChange(picker: datePicker,
                                             birthDate: datePicker.date)
     }
-    
     @objc private func viewDidTapped() {
         self.view.endEditing(true)
     }
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == self.emailTextField {
             self.delegate?.emailDidChanged(email: textField.text ?? "")
         }
     }
-    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         print("textFieldBeganEndEditing")
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
