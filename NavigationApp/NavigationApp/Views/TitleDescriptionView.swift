@@ -11,6 +11,7 @@ import UIKit
 class TitleDescriptionView: UIView {
 
     //    MARK: - IBInspectable
+
     @IBInspectable
     var titleText: String = "" {
         didSet {
@@ -24,6 +25,7 @@ class TitleDescriptionView: UIView {
         }
     }
     // MARK: - IBOtlet
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionaLabel: UILabel!

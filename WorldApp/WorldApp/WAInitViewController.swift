@@ -9,6 +9,10 @@ import UIKit
 
 class WAInitViewController: UIViewController {
 
+    //MARK: - gui variables
+    private lazy var topLabelConstraint: NSLayoutConstraint = self.appLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,
+                                                                                                 constant: 35)
+
     private lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "splashImage")
@@ -45,24 +49,39 @@ class WAInitViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "Init Controller"
+
+        self.view.backgroundColor = .white
+
+        let addButton = UIBarButtonItem(systemItem: .add)
+        self.navigationItem.setRightBarButton(addButton, animated: false)
+
+        let doneButton = UIBarButtonItem(systemItem: .done)
+        self.navigationItem.setLeftBarButton(doneButton, animated: false)
+
         self.view.addSubview(backgroundImageView)
         self.view.addSubview(appLabel)
         self.view.addSubview(continueButton)
 
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 
-//        self.setUpContraints()
-//        self.setUpComtraintsWithActivation()
+        //        self.setUpContraints()
+        //        self.setUpComtraintsWithActivation()
         self.setUpContraintsWithFunction()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
+        guard self.topLabelConstraint.constant < 250 else { return }
+
+        self.topLabelConstraint.constant = 200
+        self.view.setNeedsUpdateConstraints()
+
         UIView.animate(withDuration: 1.5) {
-            self.backgroundImageView.alpha = 0.5
+            self.backgroundImageView.alpha = 0.7
+            self.view.layoutIfNeeded()
         }
     }
-
 
     func setUpContraints() {
         NSLayoutConstraint.activate([
@@ -77,7 +96,6 @@ class WAInitViewController: UIViewController {
             self.appLabel.leftAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leftAnchor, constant: 25),
             self.appLabel.rightAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.rightAnchor, constant: -25)
         ])
-
     }
 
     func setUpComtraintsWithActivation() {
@@ -108,9 +126,10 @@ class WAInitViewController: UIViewController {
         ])
 
         self.view.addConstraints([
-            NSLayoutConstraint(item: self.appLabel, attribute: .top, relatedBy: .equal,
-                               toItem: self.view.safeAreaLayoutGuide, attribute: .top,
-                               multiplier: 1, constant: 35),
+            //            NSLayoutConstraint(item: self.appLabel, attribute: .top, relatedBy: .equal,
+            //                               toItem: self.view.safeAreaLayoutGuide, attribute: .top,
+            //                               multiplier: 1, constant: 35),
+            self.topLabelConstraint,
             NSLayoutConstraint(item: self.appLabel, attribute: .left, relatedBy: .equal,
                                toItem: self.view.safeAreaLayoutGuide, attribute: .left,
                                multiplier: 1, constant: 25),
@@ -134,25 +153,31 @@ class WAInitViewController: UIViewController {
     }
 
     @objc private func continueButtonTapped() {
-        let alertController = UIAlertController(title: "Continue tapped",
-                                                message: "What do want to do?",
-                                                preferredStyle: .alert)
-
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
-            print("OK action tapped")
-        }
-
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action) in
-            print("Delete action tapped")
-        }
-
-        let cancelAlert = UIAlertAction(title: "Cancel", style: .cancel)
-
-//        alertController.addAction(cancelAlert)
-        alertController.addAction(deleteAction)
-        alertController.addAction(okAction)
-
-        self.present(alertController, animated: true)
-
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            sceneDelegate.changeRootViewController(WATabBarController())
     }
+}
+//
+//    private func showAlert() {
+//        let alertController = UIAlertController(title: "Continue tapped",
+//                                                message: "What do want to do?",
+//                                                preferredStyle: .}alert)
+//
+//    let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+//        print("OK action tapped")
+//    }
+//
+//    let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+//        print("Delete action tapped")
+//    }
+//
+//    let cancelAlert = UIAlertAction(title: "Cancel", style: .cancel)
+//
+//    //        alertController.addAction(cancelAlert)
+//    alertController.addAction(deleteAction)
+//    alertController.addAction(okAction)
+//
+//    self.present(alertController, animated: true)
+//}
+
 }

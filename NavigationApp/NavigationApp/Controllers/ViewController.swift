@@ -10,7 +10,9 @@ import UIKit
 class ViewController: UIViewController, ShowContactControllerDelegate {
 
     //MARK: - variables
+    
     let userCardInfo = NAUserCardinfo()
+
     //MARK: - outlets
     @IBOutlet weak var maneView: UIView!
     @IBOutlet weak var nameView: TitleDescriptionView!
@@ -18,6 +20,7 @@ class ViewController: UIViewController, ShowContactControllerDelegate {
     @IBOutlet weak var occupetionView: TitleDescriptionView!
     @IBOutlet weak var infoView: UITextView!
     @IBOutlet weak var editinfoButton: UIButton!
+
     // MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
