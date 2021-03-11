@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WAInitViewController: UIViewController {
 
@@ -110,20 +111,24 @@ class WAInitViewController: UIViewController {
     }
 
     func setUpContraintsWithFunction() {
-        self.view.addConstraints([
-            NSLayoutConstraint(item: self.backgroundImageView, attribute: .top, relatedBy: .equal,
-                               toItem: self.view, attribute: .top,
-                               multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.backgroundImageView, attribute: .left, relatedBy: .equal,
-                               toItem: self.view, attribute: .left,
-                               multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.backgroundImageView, attribute: .right, relatedBy: .equal,
-                               toItem: self.view, attribute: .right,
-                               multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.backgroundImageView, attribute: .bottom, relatedBy: .equal,
-                               toItem: self.view, attribute: .bottom,
-                               multiplier: 1, constant: 0)
-        ])
+//        self.view.addConstraints([
+//            NSLayoutConstraint(item: self.backgroundImageView, attribute: .top, relatedBy: .equal,
+//                               toItem: self.view, attribute: .top,
+//                               multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self.backgroundImageView, attribute: .left, relatedBy: .equal,
+//                               toItem: self.view, attribute: .left,
+//                               multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self.backgroundImageView, attribute: .right, relatedBy: .equal,
+//                               toItem: self.view, attribute: .right,
+//                               multiplier: 1, constant: 0),
+//            NSLayoutConstraint(item: self.backgroundImageView, attribute: .bottom, relatedBy: .equal,
+//                               toItem: self.view, attribute: .bottom,
+//                               multiplier: 1, constant: 0)
+//        ])
+
+        self.backgroundImageView.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
 
         self.view.addConstraints([
             //            NSLayoutConstraint(item: self.appLabel, attribute: .top, relatedBy: .equal,

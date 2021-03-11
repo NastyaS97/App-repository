@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A80A2A386E709CD42A6942 /* Pods_WorldApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078F20895BA64298F67CDB80 /* Pods_WorldApp.framework */; };
 		E07C100625ED4AB30049A8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C100525ED4AB30049A8B5 /* AppDelegate.swift */; };
 		E07C100825ED4AB30049A8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C100725ED4AB30049A8B5 /* SceneDelegate.swift */; };
 		E07C100A25ED4AB30049A8B5 /* WAInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C100925ED4AB30049A8B5 /* WAInitViewController.swift */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		078F20895BA64298F67CDB80 /* Pods_WorldApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B38936853BA8B2ED858F718E /* Pods-WorldApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldApp.release.xcconfig"; path = "Target Support Files/Pods-WorldApp/Pods-WorldApp.release.xcconfig"; sourceTree = "<group>"; };
+		CEC4E7F8D342975ACAE1E31E /* Pods-WorldApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldApp.debug.xcconfig"; path = "Target Support Files/Pods-WorldApp/Pods-WorldApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E07C100225ED4AB30049A8B5 /* WorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07C100525ED4AB30049A8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E07C100725ED4AB30049A8B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 		E0B695F825F3840400C0C8ED /* WAPlacesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPlacesController.swift; sourceTree = "<group>"; };
 		E0B695FB25F3841B00C0C8ED /* WASettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WASettingsController.swift; sourceTree = "<group>"; };
 		E0B695FE25F38DA700C0C8ED /* WATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATabBarController.swift; sourceTree = "<group>"; };
+		E0E96DDD25FA781A00C13F50 /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Test.playground; path = ../../../Test.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +43,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A80A2A386E709CD42A6942 /* Pods_WorldApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF42B8AC5033D37B681B4B24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEC4E7F8D342975ACAE1E31E /* Pods-WorldApp.debug.xcconfig */,
+				B38936853BA8B2ED858F718E /* Pods-WorldApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E07C0FF925ED4AB30049A8B5 = {
 			isa = PBXGroup;
 			children = (
 				E07C100425ED4AB30049A8B5 /* WorldApp */,
 				E07C100325ED4AB30049A8B5 /* Products */,
+				E0E96DE025FA892100C13F50 /* Frameworks */,
+				DF42B8AC5033D37B681B4B24 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +83,7 @@
 			children = (
 				E07C102625ED73AF0049A8B5 /* MyPlayground.playground */,
 				E07C100525ED4AB30049A8B5 /* AppDelegate.swift */,
+				E0E96DDD25FA781A00C13F50 /* Test.playground */,
 				E07C100725ED4AB30049A8B5 /* SceneDelegate.swift */,
 				E0B695F525F383C100C0C8ED /* WAPhotoController.swift */,
 				E0B695F825F3840400C0C8ED /* WAPlacesController.swift */,
@@ -78,6 +97,14 @@
 			path = WorldApp;
 			sourceTree = "<group>";
 		};
+		E0E96DE025FA892100C13F50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				078F20895BA64298F67CDB80 /* Pods_WorldApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,10 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E07C101625ED4AB40049A8B5 /* Build configuration list for PBXNativeTarget "WorldApp" */;
 			buildPhases = (
+				A0C4742C98F4EB5A9B391EAE /* [CP] Check Pods Manifest.lock */,
 				E07C0FFE25ED4AB30049A8B5 /* Sources */,
 				E07C0FFF25ED4AB30049A8B5 /* Frameworks */,
 				E07C100025ED4AB30049A8B5 /* Resources */,
 				E07C101C25ED54B30049A8B5 /* ShellScript */,
+				04E699621F520D2190766320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,6 +173,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04E699621F520D2190766320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldApp/Pods-WorldApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WorldApp/Pods-WorldApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WorldApp/Pods-WorldApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0C4742C98F4EB5A9B391EAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WorldApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E07C101C25ED54B30049A8B5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -310,6 +378,7 @@
 		};
 		E07C101725ED4AB40049A8B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEC4E7F8D342975ACAE1E31E /* Pods-WorldApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -329,6 +398,7 @@
 		};
 		E07C101825ED4AB40049A8B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B38936853BA8B2ED858F718E /* Pods-WorldApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

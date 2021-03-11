@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WASettingsController: UIViewController {
 
@@ -19,29 +20,56 @@ class WASettingsController: UIViewController {
         }
     }
 
+    private lazy var cityTextField: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .gray
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.inputView = self.picker
+        textField.inputAccessoryView = self.doneTollBar
+
+        return textField
+    }()
+
     private lazy var picker: UIPickerView = {
         let picker = UIPickerView()
         picker.delegate = self
         picker.dataSource = self
         picker.translatesAutoresizingMaskIntoConstraints = false
-        picker.sizeToFit()
+
         return picker
+    }()
+
+    private lazy var doneTollBar: UIToolbar = {
+        let toolbar = UIToolbar()
+        toolbar.items = [
+            UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil),
+            UIBarButtonItem(barButtonSystemItem: .done,
+                            target: self,
+                            action: #selector(doneTapped))
+        ]
+        toolbar.translatesAutoresizingMaskIntoConstraints = false
+        toolbar.sizeToFit()
+
+        return toolbar
     }()
 
     override func viewDidLoad() {
 
         super.viewDidLoad()
 
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = .white
         self.title = "Settings"
 
-        self.view.addSubview(picker)
+        self.view.addSubview(cityTextField)
 
-        NSLayoutConstraint.activate([
-                                        self.picker.centerYAnchor.constraint(equalTo: self.view.bottomAnchor),
-            self.picker.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            self.picker.rightAnchor.constraint(equalTo: self.view.rightAnchor)
-        ])
+        self.cityTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(25)
+            make.left.right.equalToSuperview().inset(25)
+            make.height.equalTo(35)
+        }
+    }
+    @objc private func doneTapped() {
+        self.cityTextField.resignFirstResponder()
     }
 }
 
@@ -60,5 +88,6 @@ extension WASettingsController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(Cities.stringCities[row])
+        self.cityTextField.text = Cities.stringCities[row]
     }
 }
