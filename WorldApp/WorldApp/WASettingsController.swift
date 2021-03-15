@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class WASettingsController: UIViewController {
+class WASettingsController: WAViewController {
 
     enum Cities: String,  CaseIterable {
         case minsk, gomel, kiev, moscow, paris
@@ -57,17 +57,28 @@ class WASettingsController: UIViewController {
 
         super.viewDidLoad()
 
-        self.view.backgroundColor = .white
+        self.mainVew.backgroundColor = .white
         self.title = "Settings"
 
         self.view.addSubview(cityTextField)
 
+        let view = UIView()
+        view.backgroundColor = .blue
+        self.mainVew.addSubview(blueView)
+
         self.cityTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(25)
-            make.left.right.equalToSuperview().inset(25)
+            make.top.left.right.equalToSuperview().inset(25)
             make.height.equalTo(35)
+//            make.bottom.equalToSuperview()
+        }
+
+        blueView.snp.makeConstraints { (make) in
+                make.top.equalTo(cityTextField.snp.bottom).offset(25)
+                make.left.right.equalToSuperview().inset(25)
+                make.height.equalTo(950)
         }
     }
+
     @objc private func doneTapped() {
         self.cityTextField.resignFirstResponder()
     }
