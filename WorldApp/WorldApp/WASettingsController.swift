@@ -10,7 +10,7 @@ import SnapKit
 
 class WASettingsController: WAViewController {
 
-    enum Cities: String,  CaseIterable {
+    enum Cities: String, CaseIterable {
         case minsk, gomel, kiev, moscow, paris
 
         static var stringCities: [String] {
@@ -62,8 +62,8 @@ class WASettingsController: WAViewController {
 
         self.view.addSubview(cityTextField)
 
-        let view = UIView()
-        view.backgroundColor = .blue
+        let blueView = UIView()
+        blueView.backgroundColor = .blue
         self.mainVew.addSubview(blueView)
 
         self.cityTextField.snp.makeConstraints { (make) in

@@ -11,6 +11,16 @@ class WAPlacesCell: UITableViewCell {
 
     static let reuceIdentifier: String = "WAPlacesCell"
 
+    var favouriteWasTapped: (() -> Void)?
+
+    private var isFavourite: Bool = false {
+        didSet {
+            self.starImageView.image = isFavourite
+                ? UIImage(systemName: "star.fill")
+                : UIImage(systemName: "star")
+        }
+    }
+
     private lazy var cardContainerView: UIView = {
         let view = UIView()
         self.layer.cornerRadius = 15
@@ -20,6 +30,9 @@ class WAPlacesCell: UITableViewCell {
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.clipsToBounds = false
         view.backgroundColor = .white
+
+        view.layer.shouldRasterize = true
+        view.layer.rasterizationScale = UIScreen.main.scale
 
         return view
     }()
@@ -53,6 +66,21 @@ class WAPlacesCell: UITableViewCell {
         return label
     }()
 
+    private lazy var starImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.tintColor = .yellow
+        imageView.image = UIImage(systemName: "star")
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 15
+        imageView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(UITapGestureRecognizer(target: self,
+                                                              action: #selector(starTapped)))
+
+        return imageView
+    }()
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -64,10 +92,13 @@ class WAPlacesCell: UITableViewCell {
     }
 
     func initCell() {
+        self.translatesAutoresizingMaskIntoConstraints = false
+
         self.contentView.addSubview(self.cardContainerView)
         self.contentView.addSubview(self.placeImageView)
         self.contentView.addSubview(self.imageName)
         self.contentView.addSubview(self.imageDescription)
+        self.contentView.addSubview(self.starImageView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -79,6 +110,12 @@ class WAPlacesCell: UITableViewCell {
     }
 
     override func updateConstraints() {
+
+        self.starImageView.snp.updateConstraints { (make) in
+            make.top.right.equalToSuperview().inset(15)
+            make.size.equalTo(35)
+        }
+
         self.cardContainerView.snp.updateConstraints { (make) in
             make.top.equalToSuperview().offset(15)
             make.left.right.bottom.equalToSuperview().inset(15)
@@ -106,5 +143,20 @@ class WAPlacesCell: UITableViewCell {
         self.imageDescription.text = imageDescriptions
 
         self.setNeedsUpdateConstraints()
+    }
+
+    func setcell(model: WAPlace) {
+        self.imageName.text = model.title
+        self.imageDescription.text = model.description
+        self.isFavourite = model.isFavourite
+
+        self.setNeedsUpdateConstraints()
+    }
+
+    @objc private func starTapped() {
+        self.isFavourite.toggle()
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+
+        self.favouriteWasTapped?()
     }
 }

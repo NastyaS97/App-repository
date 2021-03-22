@@ -29,8 +29,8 @@ class WATabBarController: UITabBarController {
         self.setViewControllers([
             UINavigationController(rootViewController: settingsController),
             UINavigationController(rootViewController: photoController),
-            UINavigationController(rootViewController: placesController),
-        ], animated: true)
+            UINavigationController(rootViewController: placesController)],
+                                animated: true)
 
         self.setTabBarAppearance()
     }

@@ -20,8 +20,6 @@ class WAViewController: UIViewController {
 
     private(set) lazy var mainVew = UIView()
 
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(self.mainScrollView)
