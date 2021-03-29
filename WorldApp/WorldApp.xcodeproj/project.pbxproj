@@ -14,9 +14,10 @@
 		E07C100A25ED4AB30049A8B5 /* WAInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C100925ED4AB30049A8B5 /* WAInitViewController.swift */; };
 		E07C100F25ED4AB40049A8B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E07C100E25ED4AB40049A8B5 /* Assets.xcassets */; };
 		E07C101225ED4AB40049A8B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E07C101025ED4AB40049A8B5 /* LaunchScreen.storyboard */; };
+		E081E963261250AF00C3A831 /* WADefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E081E962261250AF00C3A831 /* WADefaults.swift */; };
 		E08A881225FFE6980053E316 /* WAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08A881125FFE6980053E316 /* WAViewController.swift */; };
 		E0A3289B260903AA00576918 /* WAPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A3289A260903AA00576918 /* WAPlace.swift */; };
-		E0B695F625F383C100C0C8ED /* WAPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B695F525F383C100C0C8ED /* WAPhotoController.swift */; };
+		E0B695F625F383C100C0C8ED /* WAFavouritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B695F525F383C100C0C8ED /* WAFavouritesController.swift */; };
 		E0B695F925F3840400C0C8ED /* WAPlacesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B695F825F3840400C0C8ED /* WAPlacesController.swift */; };
 		E0B695FC25F3841B00C0C8ED /* WASettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B695FB25F3841B00C0C8ED /* WASettingsController.swift */; };
 		E0B695FF25F38DA700C0C8ED /* WATabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B695FE25F38DA700C0C8ED /* WATabBarController.swift */; };
@@ -35,9 +36,10 @@
 		E07C101125ED4AB40049A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07C101325ED4AB40049A8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E07C102625ED73AF0049A8B5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		E081E962261250AF00C3A831 /* WADefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADefaults.swift; sourceTree = "<group>"; };
 		E08A881125FFE6980053E316 /* WAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAViewController.swift; sourceTree = "<group>"; };
 		E0A3289A260903AA00576918 /* WAPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPlace.swift; sourceTree = "<group>"; };
-		E0B695F525F383C100C0C8ED /* WAPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPhotoController.swift; sourceTree = "<group>"; };
+		E0B695F525F383C100C0C8ED /* WAFavouritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAFavouritesController.swift; sourceTree = "<group>"; };
 		E0B695F825F3840400C0C8ED /* WAPlacesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPlacesController.swift; sourceTree = "<group>"; };
 		E0B695FB25F3841B00C0C8ED /* WASettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WASettingsController.swift; sourceTree = "<group>"; };
 		E0B695FE25F38DA700C0C8ED /* WATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATabBarController.swift; sourceTree = "<group>"; };
@@ -107,7 +109,8 @@
 				E07C100525ED4AB30049A8B5 /* AppDelegate.swift */,
 				E00E2F2925FFDAE3004CF1C3 /* Features */,
 				E0E96DDD25FA781A00C13F50 /* Test.playground */,
-				E0B695F525F383C100C0C8ED /* WAPhotoController.swift */,
+				E0B695F525F383C100C0C8ED /* WAFavouritesController.swift */,
+				E081E9612612509300C3A831 /* DataSaving */,
 				E0B695F825F3840400C0C8ED /* WAPlacesController.swift */,
 				E0A3289A260903AA00576918 /* WAPlace.swift */,
 				E08A881125FFE6980053E316 /* WAViewController.swift */,
@@ -119,6 +122,14 @@
 				E07C101325ED4AB40049A8B5 /* Info.plist */,
 			);
 			path = WorldApp;
+			sourceTree = "<group>";
+		};
+		E081E9612612509300C3A831 /* DataSaving */ = {
+			isa = PBXGroup;
+			children = (
+				E081E962261250AF00C3A831 /* WADefaults.swift */,
+			);
+			path = DataSaving;
 			sourceTree = "<group>";
 		};
 		E0E96DE025FA892100C13F50 /* Frameworks */ = {
@@ -261,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0B695F925F3840400C0C8ED /* WAPlacesController.swift in Sources */,
-				E0B695F625F383C100C0C8ED /* WAPhotoController.swift in Sources */,
+				E0B695F625F383C100C0C8ED /* WAFavouritesController.swift in Sources */,
 				E07C100A25ED4AB30049A8B5 /* WAInitViewController.swift in Sources */,
 				E0A3289B260903AA00576918 /* WAPlace.swift in Sources */,
 				E07C100625ED4AB30049A8B5 /* AppDelegate.swift in Sources */,
@@ -269,6 +280,7 @@
 				E00E2F2725FFC4F9004CF1C3 /* WAPlacesCell.swift in Sources */,
 				E0B695FC25F3841B00C0C8ED /* WASettingsController.swift in Sources */,
 				E08A881225FFE6980053E316 /* WAViewController.swift in Sources */,
+				E081E963261250AF00C3A831 /* WADefaults.swift in Sources */,
 				E07C100825ED4AB30049A8B5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

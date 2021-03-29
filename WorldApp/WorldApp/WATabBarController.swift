@@ -12,7 +12,7 @@ class WATabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let photoController = WAPhotoController()
+        let photoController = WAFavouritesController()
         photoController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites,
                                                   tag: 0)
 

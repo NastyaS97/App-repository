@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WAPlace {
+struct WAPlace: Codable {
     let id = UUID()
     let title: String
     let description: String?

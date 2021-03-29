@@ -9,40 +9,20 @@ import UIKit
 
 class WAPlacesController: UITableViewController {
 
-    private var places: [WAPlace] = [
-        WAPlace(title: "Chicago",
-                description: "The City of Chicago covers an area of 60,000 hectares and sits 176 meters (578 feet) above sea level on the southwestern shore of Lake Michigan. At 190 km wide and 495 km long, its the 5th largest body of fresh water in the world.",
-                imageUrl: "https://media.timeout.com/images/105658075/image.jpg)",
-                isFavourite: false),
-        WAPlace(title: "Minsk",
-                description: nil,
-                imageUrl: "https://www.toursoyuz.by/wp-content/uploads/2019/05/minsk.jpg",
-                isFavourite: true),
-        WAPlace(title: "Gomel",
-                description: nil,
-                imageUrl: "https://planetabelarus.by/upload/medialibrary/a45/a4509b7c9d54bdc9a20886c9ab9e981f.jpg",
-                isFavourite: false),
-        WAPlace(title: "Cardif",
-                description: nil,
-                imageUrl: "https://cw-gbl-gws-prod.azureedge.net/-/media/cw/emea/united-kingdom/offices/hero-image-emea-office-cardiff-small.jpg",
-                isFavourite: false),
-        WAPlace(title: "Moscow",
-                description: "Is the capital and largest city of Russia.",
-                imageUrl: "https://media.istockphoto.com/photos/st-basils-cathedral-and-golden-first-rays-of-the-sun-picture-id1062947134?k=6&m=1062947134&s=612x612&w=0&h=8_QdIz8qrp76_KWjduddK4YZsXW0_e61FQCz0o2a_ns=",
-                isFavourite: false),
-        WAPlace(title: "Paris",
-                description: nil,
-                imageUrl: "",
-                isFavourite: false),
-        WAPlace(title: "Kiev",
-                description: nil,
-                imageUrl: "https://images11.popmeh.ru/upload/custom/e26/e26f37f51198bf3c494bc15f674051a3.jpg",
-                isFavourite: true),
-        WAPlace(title: "Cairo",
-                description: nil,
-                imageUrl: "https://specials-images.forbesimg.com/imageserve/466090186/960x0.jpg",
-                isFavourite: false)
-    ]
+    private var places: [WAPlace] = WADefaults.sh.places {
+        didSet {
+            WADefaults.sh.places = self.places
+            self.filteredPlaces = self.places
+        }
+    }
+
+    private lazy var filteredPlaces: [WAPlace] = self.places
+
+    private lazy var searchBar: UISearchBar = {
+        let search = UISearchBar()
+        search.sizeToFit()
+        return search
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +36,9 @@ class WAPlacesController: UITableViewController {
                                 forCellReuseIdentifier: WAPlacesCell.reuceIdentifier)
         self.tableView.translatesAutoresizingMaskIntoConstraints = false
         self.navigationItem.rightBarButtonItems = [self.editButtonItem]
+
+        self.tableView.tableHeaderView = self.searchBar
+        self.searchBar.delegate = self
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -66,44 +49,38 @@ class WAPlacesController: UITableViewController {
         return "Section title"
     }
 
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return ["1", "2", "3"]
-    }
+//    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        return ["1", "2", "3"]
+//    }
 
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView()
-        if section == 2 {
-            view.backgroundColor = .green
-        } else {
-            view.backgroundColor = .yellow
-        }
-        return view
-    }
-
-    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UITableViewHeaderFooterView()
-        if section == 2 {
-            view.backgroundColor = .brown
-        } else {
-            view.backgroundColor = .black
-        }
-        return view
-    }
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let view = UIView()
+//        if section == 2 {
+//            view.backgroundColor = .green
+//        } else {
+//            view.backgroundColor = .yellow
+//        }
+//        return view
+//    }
+//
+//    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let view = UITableViewHeaderFooterView()
+//        if section == 2 {
+//            view.backgroundColor = .brown
+//        } else {
+//            view.backgroundColor = .black
+//        }
+//        return view
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else if section == 1 {
-            return 4
-        } else {
-            return 2
-        }
+        return self.filteredPlaces.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: WAPlacesCell.reuceIdentifier,
                                                  for: indexPath) as? WAPlacesCell ?? WAPlacesCell()
-        cell.setcell(model: self.places[indexPath.row])
+        cell.setcell(model: self.filteredPlaces[indexPath.row])
         cell.favouriteWasTapped = { [weak self] in
 //            guard let self = self else { return }
             self?.places[indexPath.row].isFavourite.toggle()
@@ -124,6 +101,9 @@ class WAPlacesController: UITableViewController {
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+
+//        WADefaults.sh.test += 1
+//        WADefaults.sh.saveTestValue()
 
         // 1. delete and reload all table view
 //        self.places.remove(at: indexPath.row)
@@ -165,6 +145,31 @@ class WAPlacesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         self.places.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+        self.tableView.reloadData()
+    }
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        super.setEditing(editing, animated: animated)
+
+        self.searchBar.isHidden = editing
+    }
+}
+
+
+
+
+extension WAPlacesController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.navigationItem.rightBarButtonItems = searchText.isEmpty ? [self.editButtonItem] : nil
+//        if searchText.isEmpty {
+//            self.filteredPlaces = self.places
+//        } else {
+//            self.filteredPlaces = self.places.filter({ (place: WAPlace) -> Bool in
+//                place.title.lowercased().contains(searchText.lowercased())
+//            })
+//        }
+        self.filteredPlaces = searchText.isEmpty
+            ? self.places
+            : self.places.filter { $0.title.lowercased().lowercased().contains(searchText.lowercased()) }
         self.tableView.reloadData()
     }
 }
