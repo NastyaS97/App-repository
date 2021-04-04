@@ -9,6 +9,8 @@ import UIKit
 
 class WAPlacesController: UITableViewController {
 
+    // MARK: - models
+
     private var places: [WAPlace] = WADefaults.sh.places {
         didSet {
             WADefaults.sh.places = self.places
@@ -18,11 +20,15 @@ class WAPlacesController: UITableViewController {
 
     private lazy var filteredPlaces: [WAPlace] = self.places
 
+    // MARK: - gui variables
+
     private lazy var searchBar: UISearchBar = {
         let search = UISearchBar()
         search.sizeToFit()
         return search
     }()
+
+    // MARK: - life cycle func
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +50,15 @@ class WAPlacesController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
+
+    // MARK: - likeNotifications
+
+    private func sendLikeActionsNotifications() {
+        likeNotificationsCenter.default.post(Notification(name: .placeLikeAction))
+    }
+
+
+    // MARK: - tableView
 
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section title"
@@ -84,6 +99,7 @@ class WAPlacesController: UITableViewController {
         cell.favouriteWasTapped = { [weak self] in
 //            guard let self = self else { return }
             self?.places[indexPath.row].isFavourite.toggle()
+            self?.sendLikeActionsNotifications()
         }
 
 //       cell.backgroundColor = .white

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29A80A2A386E709CD42A6942 /* Pods_WorldApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078F20895BA64298F67CDB80 /* Pods_WorldApp.framework */; };
+		E0051949261A65C100D34675 /* NotificationsName+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0051948261A65C100D34675 /* NotificationsName+Ex.swift */; };
 		E00E2F2725FFC4F9004CF1C3 /* WAPlacesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E2F2625FFC4F9004CF1C3 /* WAPlacesCell.swift */; };
 		E07C100625ED4AB30049A8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C100525ED4AB30049A8B5 /* AppDelegate.swift */; };
 		E07C100825ED4AB30049A8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07C100725ED4AB30049A8B5 /* SceneDelegate.swift */; };
@@ -27,6 +28,8 @@
 		078F20895BA64298F67CDB80 /* Pods_WorldApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WorldApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38936853BA8B2ED858F718E /* Pods-WorldApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldApp.release.xcconfig"; path = "Target Support Files/Pods-WorldApp/Pods-WorldApp.release.xcconfig"; sourceTree = "<group>"; };
 		CEC4E7F8D342975ACAE1E31E /* Pods-WorldApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WorldApp.debug.xcconfig"; path = "Target Support Files/Pods-WorldApp/Pods-WorldApp.debug.xcconfig"; sourceTree = "<group>"; };
+		E0051948261A65C100D34675 /* NotificationsName+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationsName+Ex.swift"; sourceTree = "<group>"; };
+		E005195A261A694700D34675 /* Test.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Test.playground; sourceTree = "<group>"; };
 		E00E2F2625FFC4F9004CF1C3 /* WAPlacesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPlacesCell.swift; sourceTree = "<group>"; };
 		E07C100225ED4AB30049A8B5 /* WorldApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E07C100525ED4AB30049A8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +38,7 @@
 		E07C100E25ED4AB40049A8B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E07C101125ED4AB40049A8B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E07C101325ED4AB40049A8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E07C102625ED73AF0049A8B5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		E07C102625ED73AF0049A8B5 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = WorldApp/Playground/MyPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E081E962261250AF00C3A831 /* WADefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADefaults.swift; sourceTree = "<group>"; };
 		E08A881125FFE6980053E316 /* WAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAViewController.swift; sourceTree = "<group>"; };
 		E0A3289A260903AA00576918 /* WAPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAPlace.swift; sourceTree = "<group>"; };
@@ -65,6 +68,113 @@
 				B38936853BA8B2ED858F718E /* Pods-WorldApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E005194B261A66A000D34675 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E005194E261A66C800D34675 /* Controller */,
+				E005194D261A66C200D34675 /* Models */,
+				E005194C261A66BB00D34675 /* Views */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		E005194C261A66BB00D34675 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E005194D261A66C200D34675 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E005194E261A66C800D34675 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0B695FB25F3841B00C0C8ED /* WASettingsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E005194F261A66E600D34675 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				E0051953261A672900D34675 /* Controller */,
+				E0051951261A671100D34675 /* Views */,
+				E0051950261A66F800D34675 /* Models */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		E0051950261A66F800D34675 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E0A3289A260903AA00576918 /* WAPlace.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E0051951261A671100D34675 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0051952261A671D00D34675 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0051952261A671D00D34675 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E00E2F2625FFC4F9004CF1C3 /* WAPlacesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		E0051953261A672900D34675 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0B695F825F3840400C0C8ED /* WAPlacesController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E0051954261A674A00D34675 /* Favoutite */ = {
+			isa = PBXGroup;
+			children = (
+				E0051955261A676400D34675 /* Controller */,
+			);
+			path = Favoutite;
+			sourceTree = "<group>";
+		};
+		E0051955261A676400D34675 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E0B695F525F383C100C0C8ED /* WAFavouritesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E0051956261A677500D34675 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0051948261A65C100D34675 /* NotificationsName+Ex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E0051958261A693000D34675 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				E005195A261A694700D34675 /* Test.playground */,
+				E07C102625ED73AF0049A8B5 /* MyPlayground.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 		E00E2F2925FFDAE3004CF1C3 /* Features */ = {
@@ -105,17 +215,16 @@
 			isa = PBXGroup;
 			children = (
 				E07C100725ED4AB30049A8B5 /* SceneDelegate.swift */,
-				E07C102625ED73AF0049A8B5 /* MyPlayground.playground */,
 				E07C100525ED4AB30049A8B5 /* AppDelegate.swift */,
 				E00E2F2925FFDAE3004CF1C3 /* Features */,
+				E005194B261A66A000D34675 /* Settings */,
 				E0E96DDD25FA781A00C13F50 /* Test.playground */,
-				E0B695F525F383C100C0C8ED /* WAFavouritesController.swift */,
+				E005194F261A66E600D34675 /* Places */,
+				E0051954261A674A00D34675 /* Favoutite */,
+				E0051958261A693000D34675 /* Playground */,
 				E081E9612612509300C3A831 /* DataSaving */,
-				E0B695F825F3840400C0C8ED /* WAPlacesController.swift */,
-				E0A3289A260903AA00576918 /* WAPlace.swift */,
+				E0051956261A677500D34675 /* Extensions */,
 				E08A881125FFE6980053E316 /* WAViewController.swift */,
-				E00E2F2625FFC4F9004CF1C3 /* WAPlacesCell.swift */,
-				E0B695FB25F3841B00C0C8ED /* WASettingsController.swift */,
 				E0B695FE25F38DA700C0C8ED /* WATabBarController.swift */,
 				E07C100E25ED4AB40049A8B5 /* Assets.xcassets */,
 				E07C101025ED4AB40049A8B5 /* LaunchScreen.storyboard */,
@@ -271,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0051949261A65C100D34675 /* NotificationsName+Ex.swift in Sources */,
 				E0B695F925F3840400C0C8ED /* WAPlacesController.swift in Sources */,
 				E0B695F625F383C100C0C8ED /* WAFavouritesController.swift in Sources */,
 				E07C100A25ED4AB30049A8B5 /* WAInitViewController.swift in Sources */,
