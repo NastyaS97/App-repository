@@ -54,9 +54,8 @@ class WAPlacesController: UITableViewController {
     // MARK: - likeNotifications
 
     private func sendLikeActionsNotifications() {
-        likeNotificationsCenter.default.post(Notification(name: .placeLikeAction))
+        NotificationCenter.default.post(Notification(name: .placeLikeAction))
     }
-
 
     // MARK: - tableView
 

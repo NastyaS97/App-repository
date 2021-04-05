@@ -12,6 +12,11 @@ class WAPlacesCell: UITableViewCell {
     static let reuceIdentifier: String = "WAPlacesCell"
 
     var favouriteWasTapped: (() -> Void)?
+    var showFavIcon: Bool = true {
+        didSet {
+            self.starImageView.isHidden = !self.showFavIcon
+        }
+    }
 
     private var isFavourite: Bool = false {
         didSet {

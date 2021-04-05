@@ -68,7 +68,7 @@ class WAFavouritesController: UIViewController {
     // MARK: - notification center
 
     private func sunbscribeToNotificstion() {
-        notificationCenter.defaults.addObserver(self, selector: #selector(placeLikeAction), name: .placeLikeAction, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(placeLikeAction), name: .placeLikeAction, object: nil)
     }
 
     @objc private func placeLikeAction() {
@@ -85,6 +85,7 @@ extension WAFavouritesController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: WAPlacesCell.reuceIdentifier,
                                                  for: indexPath)
         if let cell = cell as? WAPlacesCell {
+            cell.showFavIcon = false
             cell.setcell(model: self.filteredPlaces[indexPath.row])
         }
         return cell
